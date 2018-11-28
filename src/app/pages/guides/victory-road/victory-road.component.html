@@ -1,0 +1,659 @@
+<div  class="victory animated fadeIn">
+  <div class="row">
+    <div class="col-12">
+      <h4 class="card-title">Victory Road</h4>
+      <h6 class="card-subtitle">Take a Expedition with plenty of challenges!</h6>
+    <ol class="index">
+       <li><span class="list">1.</span>
+         <h4 class="index">
+           <a (click)="scrollToElement(Rules)">Rules</a>
+         </h4>
+       </li>
+       <li><span class="list">2.</span>
+         <h4 class="index">
+           <a (click)="scrollToElement(Requeriments)">Requeriments</a>
+         </h4>
+       </li>
+       <li><span class="list">3.</span>
+         <h4 class="index">
+           <a (click)="scrollToElement(Starting)">Starting</a>
+         </h4>
+       </li>
+       <li><span class="list">4.</span>
+         <h4 class="index">
+           <a (click)="scrollToElement(Strategy)">Strategy</a>
+         </h4>
+       </li>
+       <li><span class="list">5.</span>
+         <h4 class="index">
+           <a (click)="scrollToElement(Stats)">Stat Changes</a>
+         </h4>
+       </li>
+       <li><span class="list">6.</span>
+         <h4 class="index">
+           <a (click)="scrollToElement(Smuggler)">Poke Smuggler</a>
+         </h4>
+       </li>
+       <li><span class="list">7.</span>
+         <h4 class="index">
+           <a (click)="scrollToElement(Rewards)">Rewards</a>
+         </h4>
+       </li>
+   </ol>
+      <hr class="separator">
+      <h2 #Rules>Rules</h2>  <!-- RULES -->
+        <p>
+          Pokémon will not recover <strong>HP</strong> and
+          <strong>PP</strong> during or after battle.
+        </p>
+        <p>
+          Cannot use Pokémon <strong>Heal or
+          bag items</strong> in Victory Road.
+        </p>
+        <p>
+          Newly caught Pokémon can be <strong>assigned</strong> to
+          Victory Road Formation. (Before reset)
+        </p>
+        <p>
+          Pokémon in formation will not be affected by
+          <strong>exterior upgrades</strong> and boosts.
+        </p>
+        <p>
+          Opponents of each stage will be chosen based
+          on the <strong>power of Pokémon</strong> the player has.
+        </p>
+        <p>
+          Each time player clear the Victory Road, they
+          have a chance to encounter <strong>PokeSmuggler</strong>.
+        </p>
+        <p>
+          VIP13 players or above will get <strong>double rewards</strong>
+          from the boxes they pick up.
+        </p>
+        <p>
+          VIP5 players or above can use <span class="kill">Quick Kill</span>.
+          This will complete Victory Road till <strong>stage 10</strong>.
+        </p>
+      <hr class="separator">
+      <h2 #Requeriments>Requeriments</h2>  <!-- REQUERIMENTS -->
+        <p>
+          There is no level restriction, but We recommend
+          minimum <strong>Level 50</strong>.
+        </p>
+        <p>
+          You need to have more than <strong>10 Pokémon</strong>
+          around your level.
+        </p>
+        <p>
+          If You want to clear Victory Road everytime 100% guaranteed,
+          it will take around <strong>2 hours</strong>.
+        </p>
+          You must have every attack type covered. Example:
+        <div class="coverage">
+          <p>
+            <span class="Grass">Energy Ball</span> to kill
+            <strong>Swampert</strong> or
+            <strong>Kyogre</strong>
+          </p>
+          <p>
+            <span class="Ice">Ice Beam</span> to kill
+            <strong>Garchomp</strong> or <strong>Giratina</strong>
+          </p>
+          <p>
+            <span class="Fighting">Aura Sphere</span> to kill
+            <strong>Tyranitar</strong> or <strong>Darkrai</strong>
+          </p>
+          <p>
+            <span class="Fire">Flamethrower</span> to kill
+            <strong>Scizor</strong> or <strong>Snorlax Y</strong>
+          </p>
+        </div>
+        <p>You need Pokémon with <strong>Recover, Roost, Slack Off</strong>,
+          etc... This will help You a lot to clear your Expedition.
+        </p>
+      <hr class="separator">
+      <h2 #Starting>Starting</h2>  <!-- STARTING -->
+      <h4>Let's start the expedition to Victory Road!</h4>
+      <h5 class="bold">What is Victory Road?</h5>  <!-- WHAT IS VICTORY ROAD? -->
+
+      <p>
+        <strong>Victory Road</strong> is a serie of challenges
+        against <strong>random real trainers</strong>,
+        although they are controlled by CPU. There are a total of
+        <strong>15 stages</strong>, each one harder than the last,
+        making the stage 15 the harder.
+      </p>
+      <p>
+        Each stage has a
+        <strong>chest reward</strong>, so it's important to reach
+        the last stage, this means more rewards!
+      </p>
+
+      <h5 class="bold">When can I do Victory Road?</h5>
+      <p>
+        Everyday You can reset <strong>Victory Road</strong> once.
+        It doesn't reset automatically, so even if You miss to do
+        Victory Road one day (<strong>after 00:00 GMT+8</strong>),
+        don't worry.
+      </p>
+      <p>
+        You have another entire day to clear all
+        the stages and reset manually to do it again.
+      </p>
+
+      <p>In summary, You get an <strong>extra reset</strong> everyday.</p>
+
+      <h5 class="bold">Recommened Tips</h5>  <!-- RECOMMENED TIPS -->
+
+      <p>
+        <span class="Grass">&#x2713;</span> The <strong>Berry</strong>
+        will be reset after each battle.
+      </p>
+      <p>
+        <span class="Grass">&#x2713;</span> Escape won't fail unless You
+        are trapped.
+      </p>
+      <p>
+        <span class="Grass">&#x2713;</span> The rule of unable to recover
+        <strong>HP</strong> or <strong>PP</strong> after battle
+        not only work for you, but also your rival.
+     </p>
+      <p>
+        <span class="Grass">&#x2713;</span> The buff or debuff will
+        be reset after battle.
+      </p>
+
+      <h5 class="bold">Recommened Pokémon</h5>  <!-- RECOMMENED POKEMON -->
+          <p>
+            Tank liked Pokémon that can Recover
+            <strong>HP</strong>.
+          </p>
+          <p>
+            Pokémon with high <strong>SPD</strong>
+            and <strong>S.ATK</strong> or <strong>ATK</strong>.
+          </p>
+          <p>
+            Pokémon with debuff move like
+            <span class="Grass">Sleep Powder</span> and
+            <strong>leech HP</strong>.
+          </p>
+          <p>
+            Pokémon with <strong>SPD</strong>
+            and <span class="Ghost">Destiny Bond</span>.
+            Make a <strong>Suicide</strong> team!
+          </p>
+
+      <h5><strong>Let's start!</strong></h5>   <!-- LET'S START -->
+
+      <p>&#x25ba; First enter the Menu and select "<strong>Instance</strong>"</p>
+      <p>&#x25ba; Search and select "<strong>Victory Road</strong>"</p>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}instance.jpg"/>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory2.jpg" >
+        </div>
+      </div>
+
+      <p>&#x25ba; You will appear in "<strong>Victory Road</strong>"</p>
+
+      <p>&#x25ba; Now You can <strong>adjust</strong> your team.</p>
+      <p>&#x25ba; Remember You can use any Pokémon above
+      <strong>Level 10</strong> You have on the computer.</p>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory4.jpg"/>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory5.png" >
+        </div>
+      </div>
+
+      <p>
+        &#x25ba; Use your <strong>weak Pokémon</strong> first.
+        Save your strong Pokémon, the last trainers will be around your Level.
+      </p>
+      <p>
+        &#x25ba; Use Pokémon of <strong>different types</strong>,
+        put your fastest Pokémon first.
+      </p>
+
+      <hr class="separator">
+
+      <p>Everything is almost ready! Before start dueling trainers,
+        you should know a couple of things:</p>
+
+      <div style="margin-top:25px">
+        <p>
+          Before entering <strong>Victory Road</strong>
+          remember to equip Berry to all your Pokémon.
+        </p>
+        <p>
+          <strong>Berry</strong> won't be consumed even if it used in battle.
+        </p>
+        <p>
+          Remember to use Pokémon with <strong>priority moves</strong>
+          to secure kills on Pokémon with <strong>low HP</strong>. Good examples are...
+        </p>
+
+          <div class="coverage">
+            <p>&#x25ba; <span class="Normal">Quick Attack</span></p>
+            <p>&#x25ba; <span class="Normal">Extreme Speed</span></p>
+            <p>&#x25ba; <span class="Steel">Bullet Punch</span></p>
+          </div>
+
+        <p>
+          Every stage is harder than the last. It should
+          be easy till <strong>stage 10</strong>.
+        </p>
+        <p>You can <strong>reset</strong> Victory Road once a day.</p>
+        <p>
+          Pokémon with <span class="Grass">Sleep Powder</span>
+          and <span class="Grass">Leech Seed</span>
+          are very useful because you can heal any of your Pokémon.
+        </p>
+        <p>
+          Only <strong>6 Pokémon</strong> can enter the battle,
+          but there's no limit how many times they can switch.
+        </p>
+        <p>
+          Use moves with <strong>high PP</strong>.
+          This will help You to defeat more opponents. Examples:
+        </p>
+
+        <div class="coverage">
+          <p>&#x25ba; <span class="Grass">Bullet Seed</span></p>
+          <p>&#x25ba; <span class="Fighting">Aura Sphere</span></p>
+          <p>&#x25ba; <span class="Flying">Aerial Ace</span></p>
+          <p>&#x25ba; <span class="Steel">Steel Wing</span></p>
+        </div>
+
+        <p>
+          Use <strong>Escape</strong> to check your rival’s
+          Pokémon. Make sure your first <strong>Pokémon</strong> can hit his weakness.
+        </p>
+        <p>
+          When your rival change his Pokémon for your
+          <strong>weakness</strong>, dont stay or change Pokémon in the battle.
+          <strong>Escape</strong> to change.
+        </p>
+        <p>
+          Take use of the reset for <strong>Berry</strong>.
+          If your Pokemon’s Berry is used, consider if <strong>Escape</strong> will help.
+          (Your rival’s Pokemon’s Berry will also reset)
+        </p>
+        <p>
+          If you make false move in the battle, you can force
+          <strong>close</strong> the game. Then the record of battle with that
+          rival will be totally reset.
+        </p>
+      </div>
+
+      <img style="margin: 0 auto; display: block" src="{{ urlImage }}reset.png" >
+
+      <hr class="separator">
+
+      <h2 #Strategy>Strategy</h2>   <!-- STRATEGY -->
+
+      <h4>Clear Victory Road everytime!</h4>
+
+      <p class="m-t-20">
+         The objective of this strategy to clear <strong>Victory Road</strong>
+         100% guaranteed is to defeat every opposing Pokémon with
+         <strong>1 move K.O</strong>. Make "<span style="font-weight:bold; color:orange">
+         Super Effective</span>" move every turn is a
+         <strong>MUST</strong>.
+      </p>
+
+      <p>
+        You need to <strong>escape battle</strong> every time You
+        <strong>can't</strong> kill the enemy Pokémon in <strong>1 move</strong>.
+        At lower stages, enemy Pokémon are weak and sometimes You can defeat
+        them in <strong>1 move K.O</strong> without
+        making "<span style="font-weight:bold; color:orange">Super Effective</span>".
+      </p>
+
+      <p>
+        Your Pokémon <strong>can't</strong> take any damage at all till
+        <strong>stage 10+</strong>. That's why You need to defeat the opposing
+        Pokémon with <strong>1 move K.O</strong>.
+      </p>
+
+      <p>
+        At this point, knowing the "<strong>Effectiveness and Weakness</strong>"
+        table is very useful. You need to know every turn which move causes
+        "<span style="font-weight:bold; color:orange">Super Effective</span>"
+        to the opposing Pokémon.
+      </p>
+
+      <img src="{{ urlImage }}victory6.png" >
+
+      <p>Let's see how it works with a quick example:</p>
+
+      <p>
+        &#x25ba; Put on first place a Pokémon with
+        <span class="Grass">Grass</span> move like
+        <span class="Grass">Energy Ball</span>
+        as <strong>Mega Latias</strong>.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory8.jpg"/>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory9.png" >
+        </div>
+      </div>
+
+      <p>
+        &#x25ba; You encounter a <strong>Dragonite</strong>.
+        Your move <span class="Grass">Energy Ball</span>
+        is not effective against a <span class="Dragon">Dragon</span>
+        It's time for You to press <strong>Escape button</strong>.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory10.jpg"/>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory10a.png" >
+        </div>
+      </div>
+
+      <p>
+        &#x25ba; Let's see back again the "<strong>Effectiveness and Weakness</strong>" table.
+        Which move is strong
+        against a <span class="Dragon">Dragon</span>?
+      </p>
+      <p>The answer is <span class="Ice">Ice</span></p>
+
+      <p>
+        &#x25ba; Change your <strong>Formation</strong> and put an
+        <span class="Ice">Ice</span> type Pokémon first.
+        In my case I use <strong>Mega Articuno</strong>.
+      </p>
+
+      <p>
+        &#x25ba; Face the same Trainer again and use an
+        <span class="Ice">Ice</span> move against
+        <strong>Dragonite</strong> to deal <strong>1 move K.O</strong>.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory11.jpg"/>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory12.jpg" >
+        </div>
+      </div>
+
+      <p>
+        The next opposing Pokémon is a <strong>Mega Aerodactyl</strong>.
+        An <span class="Ice">Ice</span>
+        move should be enough to deal <strong>1 move K.O</strong>,
+        but let's think for a while.
+      </p>
+
+      <p>
+        Which type is "<span style="font-weight:bold; color:orange">Super Effective</span>"
+        against <span class="Rock">Rock</span> Pokémon? Exactly,
+        <span class="Water">Water</span>.
+        We have <span style="font-weight:bold; color:blue">Water</span> Pokémon.
+        It's better if You manage moves by <strong>PP</strong>.
+      </p>
+
+      <p>
+        As You know, <span class="Ice">Ice Beam</span> has only
+        <strong>10 PP</strong>, so it's better if you use another
+        "<span style="font-weight:bold; color:orange">Super Effective</span>"
+        move against the opposing Pokémon and save
+        <span class="Ice">Ice Beam</span> for stronger Pokémon You may encounter.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory13.png"/>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory14.jpg" >
+        </div>
+      </div>
+
+      <p>
+        As You can see, I used <strong>Mega Milotic</strong> and
+        <span class="Water">Water Pulse</span> to
+        defeat <strong>Mega Aerodactyl</strong>.
+      </p>
+
+      <p>
+        You get the same <strong>1 move K.O</strong> with the
+        advantage that <span class="Water">Water Pulse</span> have
+        way more <strong>PP</strong> than <span class="Ice">Ice Beam</span>
+      </p>
+
+      <p>
+        &#x25ba; Watch this <strong>video</strong> that resume
+         everything explained till now.
+       </p>
+
+      <div align="center"><iframe class="youtube"
+        src="https://www.youtube.com/embed/Y2WePAkVbrc" frameborder="0"
+        allowfullscreen></iframe></div>
+
+      <p>
+        Watch the minute <strong>4:33</strong> of the video.
+        <strong>Mega Lucario</strong> with <span class="Ground">Dig</span>
+        VS <strong>Mega Charizard X</strong>.
+      </p>
+
+      <p>
+        Maybe You are thinking why I don't used <span class="Ground">Dig</span>
+        that is "<span style="font-weight:bold; color:orange">Super Effective</span>"
+        against <strong>Mega Charizard X</strong>. The answer is <strong>simply
+        and very important</strong>.
+      </p>
+
+      <p class="must">
+        &#x275D;You <strong>must</strong> know your Pokémon <strong>Weaknesses</strong>
+        and <strong>Strengths</strong> and how much damage your Pokémon can deal
+        with a <strong>specific move</strong>&#x275E;
+      </p>
+
+      <p>
+        I knew that with <span class="Ground">Dig</span> I wouldn't be able to
+        defeat the opponent with <strong>1 move K.O</strong> and later <strong>Mega Lucario X</strong>
+        would have take <strong>x2 damage</strong> from a <span class="Fire">Flamethrower</span>.
+      </p>
+      <p>
+        Replacing <strong>Mega Milotic</strong> for <strong>Mega Lucario X</strong> was
+        a good move because <strong>Mega Milotic</strong> can resist a
+        <span class="Fire">Flamethrower</span> very well.
+      </p>
+
+      <hr class="separator">
+
+      <h5>Sleep Strategy</h5>  <!-- SLEEP STRATEGY -->
+
+      <p>
+        If You ever find a trainer stronger than you with more <strong>Break-up</strong>,
+        more <strong>Level</strong>, etc... Use this strategy:
+      </p>
+      <p>
+        Use a Pokémon with <span class="Grass">Sleep Powder</span>,
+        <span class="Dark">Dark Void</span>
+      </p>
+      <p>
+        When the opposing Pokémon is <strong>asleep</strong>, start
+        to raise your stats with moves like <span class="Normal">Swords Dance</span>
+        or <span class="Dark">Nasty Plot</span>
+      </p>
+      <p>After this You will <strong>1 move K.O</strong> every opposing Pokémon.</p>
+
+      <hr class="separator">
+
+      <h5>Happiny Strategy</h5>  <!-- HAPPINY STRATEGY -->
+
+      <p>If You want to heal a Pokémon and recover all your HP, use a <strong>Happiny</strong>!</p>
+
+      <p>
+        First <strong>Sleep</strong> the target with a Pokémon with
+        <span class="Grass">Sleep Powder</span>,
+        <span class="Dark">Dark Void</span>...
+      </p>
+      <p>
+        Then change your Pokémon to <strong>Happiny</strong>, then use
+        <span class="Psychic">Healing Wish</span> learned at <strong>Level 34</strong>.
+      </p>
+      <p>Finally select the Pokémon You want to fully recover <strong>HP</strong>.</p>
+
+      <p>Easy! Let's continue the Expedition!</p>
+
+      <hr class="separator">
+
+      <h2 #Stats>Stat Changes</h2>  <!-- STATS CHANGES -->
+      <h4>Don't worry about Stat Changes!</h4>
+
+      <p class="m-t-20">&#x25ba; We count <strong>Stat Changes</strong> as...</p>
+
+          <p class="Fire">Burned</p>
+          <p class="Electric">Paralyzed</p>
+          <p class="Flying">Sleeped</p>
+          <p class="Poison">Poisoned</p>
+          <p class="Ice">Frozen</p>
+
+      <p>
+        Moves that changes <strong>Pokémon stats</strong> like
+        <span class="Normal">Swords Dance</span> or moves that lower
+        your stats like <span class="Steel">Metal Sound</span>.
+      </p>
+      <p>
+        When any of your Pokémon get one of this stats changes, simply
+        <strong>Escape</strong> the battle and the stat change will disappear.
+      </p>
+
+      <img src="{{ urlImage }}victory20.png" >
+
+      <p>
+        &#x25ba; If You are in battle and the opposing Pokémon use a
+        move to <strong>boost</strong> any of his stats,
+        it's your opportunity to <strong>recover</strong> all your HP.
+      </p>
+
+      <p>
+        Example: In this battle <strong>Mega Mawile</strong> use
+        <span class="Normal">Swords Dance</span> on the first turn.
+        This is a free turn for Us, so let's use <span class="Normal">Recover</span>
+      </p>
+
+      <p>
+        &#x25ba; You can <strong>repeat</strong> this everytime
+        You want with any of your Pokémon. Use this to recover all your Pokémon with heal move.
+      </p>
+
+      <p>
+        &#x25ba; Don't worry, on the first turn <strong>Mega Mawile</strong>
+        will always use the move
+        <span class="Normal">Swords Dance</span>, unless You put a
+        Pokémon weak to <span class="Ice">Ice</span> -
+        <span class="Dark">Dark</span>
+      </p>
+
+      <p>
+        &#x25ba; Watch this <strong>video</strong> of another example of stat
+        changes, now with <span class="Grass">Sleep Powder</span>
+      </p>
+
+      <div align="center"><iframe class="youtube"
+        src="https://www.youtube.com/embed/ypbM0Yz9ksc" frameborder="0"
+        allowfullscreen></iframe></div>
+
+      <p>
+        A good match up. We use <span class="Ice">Ice Beam</span>,
+        although He's faster, He dealt <strong>low damage</strong>.
+      </p>
+
+      <p>
+        &#x25ba; <strong>Mega Venusaur</strong> will use
+        <span class="Grass">Sleep Powder</span> next turn.
+        We can risk for a turn since <span class="Grass">Sleep Powder</span>
+        has only <strong>60% hit rate</strong>.
+      </p>
+
+      <p>
+        In this case it will affect, making Us fall sleep. It's time to
+        <strong>escape</strong> and battle again.
+      </p>
+
+      <p>
+        &#x25ba; As You can see, We are not in <strong>sleep</strong>
+        anymore and <strong>Mega Venusaur</strong>  will use
+        <span class="Grass">Sleep Powder</span> on the second turn again.
+    </p>
+
+      <p>
+        &#x25ba; Remember always <strong>escape</strong> the battle if you
+        got any <strong>Stat Change</strong> or if the opposing Pokémon have
+        <strong>increased</strong> stats.
+    </p>
+
+      <hr class="separator">
+
+      <h2 #Smuggler>Poke Smuggler</h2>   <!-- POKE SMUGGLER -->
+      <h4>The Black Market is here!</h4>
+
+      <p class="m-t-20">
+        After You complete the stage 15, <strong>Poke Smuggler</strong>
+        is there waiting for You!
+      </p>
+      <p>
+        He sells unique items You only can buy here.
+        This make Poke Smuggler the <strong>best shop</strong> in Pocketown.
+      </p>
+
+      <p>
+        &#x25ba; This is one of the main reasons for doing
+        <strong>Victory Road</strong>, other is <strong>Awakening Stones</strong>.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory16.png"/>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img src="{{ urlImage }}victory17.png" >
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <h2 #Rewards>Rewards</h2>   <!-- REWARDS -->
+      <h4>Fill your pockets with many items!</h4>
+
+      <p class="m-t-20">There is a chest after every stage, total <strong>15 chest</strong>.</p>
+
+      <p>The chest rewards depend on the stage:</p>
+
+      <div class="row">
+        <div class="col-6 m-t-20">
+          <h4 class="bold">Stage 1 - 10</h4>
+          <img class="item" src="{{urlImage}}stone.png"/>
+          <img class="item" src="{{urlImage}}gold.png"/>
+          <img class="item" src="{{urlImage}}book.png"/>
+        </div>
+        <div class="col-6 m-t-20">
+          <h4 class="bold">Stage 10 - 15</h4>
+          <img class="item" src="{{urlImage}}stone.png"/>
+          <img class="item" src="{{urlImage}}book.png"/>
+          <img class="item" src="{{urlImage}}tmshard.png"/>
+        </div>
+      </div>
+
+    </div>
+ </div>
+</div>

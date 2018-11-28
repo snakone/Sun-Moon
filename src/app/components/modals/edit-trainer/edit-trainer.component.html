@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Edit Trainer</h2>
+<mat-dialog-content class="mat-typography">
+  <p>Here You can edit Trainer Info</p>
+  <h3><strong>Trainer</strong>: {{trainer.name}}</h3>
+  <form>
+    <label>Trainer Rol</label>
+    <select [(ngModel)]="trainer.role" name="role"
+       class="form-control">
+       <option value="ADMIN_ROLE">Admin</option>
+       <option value="TRAINER_ROLE">Trainer</option>
+     </select>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+
+  <button type="button" (click)="updateTrainer()"
+  class="btn btn-primary btn-success">UPDATE</button>
+</mat-dialog-actions>

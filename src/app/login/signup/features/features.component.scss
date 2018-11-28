@@ -1,0 +1,53 @@
+
+.m-t--60 {
+  margin-top: -60px;
+}
+
+.login-box {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  max-width: 98%;
+  margin: 20px auto; }
+
+  @media (min-width:365px) {
+    .login-box {
+      width:340px;
+    }
+  }
+
+  button {
+    margin: 3px auto;
+    font-weight: bold;
+  }
+
+  $colors: (
+    slide: #000,
+  );
+
+  // Sass variables compile to a static string; CSS variables are dynamic and inherited
+    // Loop through the map and set CSS custom properties using Sass variables
+  @each $button, $color in $colors {
+    .#{$button} {
+      --color: #{$color};
+      --hover: #{adjust-hue($color, 45deg)};
+    }
+  }
+
+  button {
+    color: var(--color);
+    transition: 0.25s;
+
+    &:hover,
+    &:focus {
+      border-color: var(--hover);
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  // And from the left
+  .slide:hover,
+  .slide:focus {
+    box-shadow: inset 14em 0 0 0 var(--hover);
+  }

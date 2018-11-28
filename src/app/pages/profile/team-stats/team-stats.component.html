@@ -1,0 +1,70 @@
+<div class="row" *ngIf="trainer.team.length > 0">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Team Stats</h4>
+        <h6 class="card-subtitle">Learn more about your Team</h6>
+
+        <div class="row">
+          <div class="col-12 text-center m-t-10">
+            <h3>SS: <strong>{{totalSS | number:'0.0-0'}}</strong></h3>
+            <h3>Power: <strong>{{recommenedPower | number:'0.0-0'}}</strong></h3>
+            <div class="stats">
+              <div class="progress">  <!-- HP Progress -->
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                [attr.aria-valuenow]="totalHPRate" [style.width]="totalHPRate + '%'"></div>
+                <!-- Setting Custom HTML Attributes (aria-valuenow) -->
+              </div>
+
+              <div class="progress">  <!-- ATK Progress -->
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-atk"
+                role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                [attr.aria-valuenow]="totalATKRate" [style.width]="totalATKRate + '%'"></div>
+              </div>
+
+              <div class="progress">  <!-- DEF Progress -->
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-def"
+                role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                [attr.aria-valuenow]="totalDEFRate" [style.width]="totalDEFRate + '%'"></div>
+              </div>
+
+              <div class="progress">  <!-- S.ATK Progress -->
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                [attr.aria-valuenow]="totalSATKRate" [style.width]="totalSATKRate + '%'"></div>
+              </div>
+
+              <div class="progress">  <!-- S.DEF Progress -->
+                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                [attr.aria-valuenow]="totalSDEFRate" [style.width]="totalSDEFRate + '%'"></div>
+              </div>
+
+              <div class="progress">  <!-- SPD Progress -->
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-speed"
+                role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                [attr.aria-valuenow]="totalSPDRate" [style.width]="totalSPDRate + '%'"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="legend">
+              <span>HP</span> <div class="square bg-success"></div>
+              <span>ATK</span> <div class="square bg-atk"></div>
+              <span>DEF</span> <div class="square bg-def"></div>
+              <span>S.ATK</span> <div class="square bg-danger"></div>
+              <span>S.DEF</span> <div class="square bg-sdef"></div>
+              <span>SPD</span> <div class="square bg-speed last"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

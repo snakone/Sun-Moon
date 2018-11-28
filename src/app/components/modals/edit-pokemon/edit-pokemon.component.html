@@ -1,0 +1,282 @@
+<h2 mat-dialog-title>Edit Pokémon</h2>
+<mat-dialog-content class="mat-typography">
+  <p>Here You can edit Pokémon Info</p>
+  <h3><strong>Pokémon</strong>: {{pokemon.name}}</h3>
+  <form [formGroup]="pokemonForm"
+    class="floating-labels p-t-10 p-b-10">
+
+    <input type="hidden" name="_id"
+     [value]="pokemon._id" formControlName="_id">
+
+     <!-- POKEDEX -->
+      <div class="form-group has-feedback"
+        [ngClass]="pokemonForm.controls.pokedex.invalid == true ?
+         'has-danger' : 'has-success'">
+          <div class="input-group">
+          <input type="number" placeholder="Pokédex Nº"
+          formControlName="pokedex" name="pokedex"
+        [ngClass]="pokemonForm.controls.pokedex.invalid == true ?
+         'form-control-danger' : 'form-control-success'"
+          class="form-control form-control-danger">  </div>
+      </div>
+
+      <!-- NAME -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.name.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="text" placeholder="Name"
+            formControlName="name" name="name"
+          [ngClass]="pokemonForm.controls.name.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+
+      <!-- PICTURE -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.picture.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="text" placeholder="Picture"
+            formControlName="picture" name="picture"
+          [ngClass]="pokemonForm.controls.picture.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+      <!-- GRADE -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.grade.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="grade" name="grade"
+              [ngClass]="pokemonForm.controls.grade.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Grade</option>
+                <option value="R">R</option>
+                <option value="S">S</option>
+                <option value="SR">SR</option>
+                <option value="SSR">SSR</option>
+              </select>
+            </div>
+        </div>
+
+        <!-- EVOLUTION -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.evolution.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="evolution" name="evolution"
+              [ngClass]="pokemonForm.controls.evolution.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Evolution</option>
+                <option value="1">Tiny</option>
+                <option value="2">Medium</option>
+                <option value="3">Final</option>
+                <option value="4">Mega</option>
+                <option value="5">Mega R2</option>
+              </select>
+            </div>
+        </div>
+
+      <!-- INFO -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.info.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <textarea placeholder="Pokémon Info"
+            formControlName="info" name="info"
+            [ngClass]="pokemonForm.controls.info.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger"></textarea>  </div>
+        </div>
+
+      <!-- TYPE -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.type.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="type" name="type"
+              [ngClass]="pokemonForm.controls.type.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Type</option>
+                <option value="{{type}}" *ngFor="let type of types">{{type}}</option>
+              </select>
+            </div>
+        </div>
+
+      <!-- TYPE2 -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.type2.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="type2" name="type2"
+              [ngClass]="pokemonForm.controls.type2.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Type</option>
+                <option value="None">None</option>
+                <option value="{{type}}" *ngFor="let type of types">{{type}}</option>
+              </select>
+            </div>
+        </div>
+
+      <!-- ATTACK -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.attack.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="attack" name="attack"
+              [ngClass]="pokemonForm.controls.attack.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Attack Type</option>
+                <option value="ATK">Physical</option>
+                <option value="SATK">Special</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+        </div>
+
+      <!-- LEGENDARY -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.legend.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="legend" name="legend"
+              [ngClass]="pokemonForm.controls.legend.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Legendary?</option>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </div>
+        </div>
+
+      <!-- DESCRIPTION -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.description.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="text" placeholder="Description"
+            formControlName="description" name="description"
+          [ngClass]="pokemonForm.controls.description.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+        <!-- FAMILY -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.family.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="text" placeholder="Family"
+            formControlName="family" name="family"
+          [ngClass]="pokemonForm.controls.family.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+      <div class="row"> <!-- HP -->
+          <div class="form-group has-feedback col-6"
+            [ngClass]="pokemonForm.controls.HP.invalid == true ?
+             'has-danger' : 'has-success'">
+              <div class="input-group">
+              <input type="number" placeholder="HP"
+              formControlName="HP" name="HP"
+            [ngClass]="pokemonForm.controls.HP.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger">  </div>
+          </div>
+
+          <!-- ATK -->
+          <div class="form-group has-feedback col-6"
+            [ngClass]="pokemonForm.controls.ATK.invalid == true ?
+             'has-danger' : 'has-success'">
+              <div class="input-group">
+              <input type="number" placeholder="ATK"
+              formControlName="ATK" name="ATK"
+            [ngClass]="pokemonForm.controls.ATK.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger">  </div>
+          </div>
+      </div>
+
+      <div class="row"> <!-- DEF -->
+          <div class="form-group has-feedback col-6"
+            [ngClass]="pokemonForm.controls.DEF.invalid == true ?
+             'has-danger' : 'has-success'">
+              <div class="input-group">
+              <input type="number" placeholder="DEF"
+              formControlName="DEF" name="DEF"
+            [ngClass]="pokemonForm.controls.DEF.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger">  </div>
+          </div>
+
+          <!-- S.ATK -->
+          <div class="form-group has-feedback col-6"
+            [ngClass]="pokemonForm.controls.SATK.invalid == true ?
+             'has-danger' : 'has-success'">
+              <div class="input-group">
+              <input type="number" placeholder="S.ATK"
+              formControlName="SATK" name="SATK"
+            [ngClass]="pokemonForm.controls.ATK.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger">  </div>
+          </div>
+      </div>
+
+      <div class="row">  <!-- S.DEF -->
+        <div class="form-group has-feedback col-6"
+          [ngClass]="pokemonForm.controls.SDEF.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="number" placeholder="S.DEF"
+            formControlName="SDEF" name="SDEF"
+          [ngClass]="pokemonForm.controls.SDEF.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+        <!-- SPD -->
+        <div class="form-group has-feedback col-6"
+          [ngClass]="pokemonForm.controls.SPD.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="number" placeholder="SPD"
+            formControlName="SPD" name="SPD"
+          [ngClass]="pokemonForm.controls.SPD.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+      </div>
+
+        <!-- SS -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokemonForm.controls.SS.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="number" placeholder="SS"
+            formControlName="SS" name="SS"
+          [ngClass]="pokemonForm.controls.SS.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+</form>
+
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+
+  <button type="button" [mat-dialog-close]="true" (click)="updatePokemon()"
+  class="btn btn-primary btn-success"
+  [disabled]="pokemonForm.invalid">UPDATE</button>
+  <button type="button" (click)="closeModal()"
+  class="btn btn-primary btn-error">CANCEL</button>
+</mat-dialog-actions>

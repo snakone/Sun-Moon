@@ -1,0 +1,91 @@
+<h2 mat-dialog-title>New Held Item</h2>
+<mat-dialog-content class="mat-typography">
+  <p>Here You can add a new Held Item.</p>
+    <form [formGroup]="pokeitemForm"
+      class="floating-labels p-t-20 p-b-10">
+
+      <!-- NAME -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokeitemForm.controls.item.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="text" placeholder="Name"
+            formControlName="item" name="item"
+          [ngClass]="pokeitemForm.controls.item.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+
+        <!-- PICTURE -->
+          <div class="form-group has-feedback"
+            [ngClass]="pokeitemForm.controls.picture.invalid == true ?
+             'has-danger' : 'has-success'">
+              <div class="input-group">
+              <input type="text" placeholder="Picture"
+              formControlName="picture" name="picture"
+            [ngClass]="pokeitemForm.controls.picture.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger">  </div>
+          </div>
+
+
+      <!-- GRADE -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokeitemForm.controls.grade.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="grade" name="grade"
+              [ngClass]="pokeitemForm.controls.grade.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Grade</option>
+                <option value="Very Common">Very Common</option>
+                <option value="Common">Common</option>
+                <option value="Rare">Rare</option>
+                <option value="Very Rare">Very Rare</option>
+                <option value="Legendary">Legendary</option>
+                <option value="Gym">Gym</option>
+              </select>
+            </div>
+        </div>
+
+
+
+      <!-- TYPE -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokeitemForm.controls.type.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="type" name="type"
+              [ngClass]="pokeitemForm.controls.type.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Type</option>
+                <option value="{{type}}" *ngFor="let type of types">{{type}}</option>
+              </select>
+            </div>
+        </div>
+
+      <!-- INFO -->
+        <div class="form-group has-feedback"
+          [ngClass]="pokeitemForm.controls.info.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <textarea type="text" placeholder="Description"
+            formControlName="info" name="info"
+            [ngClass]="pokeitemForm.controls.info.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger space"></textarea>  </div>
+        </div>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button type="submit" (click)="onSubmit()" [mat-dialog-close]="true"
+  [disabled]="pokeitemForm.invalid" class="btn btn-primary btn-success">
+  CREATE
+  </button>
+  <button type="button" (click)="closeModal()"
+  class="btn btn-primary btn-error">CANCEL</button>
+</mat-dialog-actions>

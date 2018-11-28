@@ -1,0 +1,28 @@
+<div id="main-wrapper">
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+   <div class="page-wrapper">
+      <div class="container-fluid">
+        <app-breadcrums></app-breadcrums>  <!-- Navigation Tooltip -->
+          <div class="marginTop">
+            <router-outlet></router-outlet>  <!-- Pages Routes -->
+          </div>
+          <a (click)="topFunction()" id="Pikachu" title="Go to top">  <!-- Pikachu Go to Top Button -->
+            <img class="pika" src="../../../../assets/images/toppikachu.png">
+          </a>
+      </div>
+   </div>
+</div>
+
+<!--
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+      <h4 class="card-title"></h4>
+      <h6 class="card-subtitle"></h6>
+      </div>
+    </div>
+  </div>
+</div>
+-->

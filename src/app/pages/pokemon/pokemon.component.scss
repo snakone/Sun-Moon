@@ -1,0 +1,59 @@
+img {
+  margin-bottom: 10px;
+}
+
+::ng-deep .mat-tab-body-content {
+  overflow: hidden !important;
+}
+
+::ng-deep .mat-tab-labels {
+    justify-content: center!important; /* align items in Main Axis */
+}
+
+@media (max-width:599px){
+  ::ng-deep .mat-tab-label {
+    padding: 0!important;
+    min-width: 60px!important;
+  }
+}
+
+.info {
+  margin-top: 15px;
+}
+
+.pokemon-info {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.next {
+  position: absolute;
+  right: 10px;
+  top: 55px;
+  color: green;
+}
+
+.previous {
+  position: absolute;
+  right: 45px;
+  top: 55px;
+  color: red;
+}
+
+.reset {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.reset:hover {
+  cursor: pointer;
+  color: black;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}

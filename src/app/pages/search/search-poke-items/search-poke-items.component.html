@@ -1,0 +1,19 @@
+<div class="row poke-items">
+  <div class="col-12">
+      <div class="card-body">
+        <div class="flex animated fadeIn slower" *ngIf="pokeitems">
+          <span *ngFor="let pokeitem of pokeitems" >
+              <img [src]="urlImage + pokeitem.picture + '.png'"
+                class="item"
+                [matTooltip]="pokeitem.item"
+                [routerLink]="['/poke-items', pokeitem.picture]"/>
+            </span>
+         </div>
+
+         <div *ngIf="pokeitems.length == 0" class="text-center">
+             No <strong>Held Item</strong> match. Please try again.
+         </div>
+
+        </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<header class="topbar">
+  <nav class="navbar top-navbar navbar-expand-md navbar-light">
+    <div class="navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> <!-- Mobile Button -->
+            <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark">
+              <i class="ti-menu"></i>
+            </a>
+          </li>
+          <li class="nav-item"> <!-- Desktop Button -->
+            <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark">
+              <i class="ti-menu"></i>
+            </a>
+          </li>
+      </ul>
+
+      <div><img routerLink="/home" (click)="closeBar()"
+        class="logo" src="../../../assets/images/logo-home.png"/></div>
+
+      <ul class="navbar-nav my-lg-0">
+
+      <li class="nav-item search-box">  <!-- Search Bar -->
+        <a class="nav-link waves-effect waves-dark"><i class="ti-search"></i></a>
+          <form class="app-search">
+              <input type="text" id="search" #value class="form-control"
+               style="margin-left:-1px" placeholder="Search anything...">
+                <a class="srh-btn"><i class="ti-close"></i></a>
+          </form>
+      </li>
+
+      <li class="nav-item dropdown">  <!-- Profile BOX -->
+          <a class="nav-link dropdown-toggle waves-effect waves-dark"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img [src]="_trainer.trainer.image | image" alt="trainer" class="profile-pic"/>
+          </a> <!-- Profile Drop Menu -->
+          <div class="dropdown-menu dropdown-menu-right animated fadeInDown faster">
+              <ul class="dropdown-user">
+                  <li>
+                      <div class="dw-user-box">
+                          <div class="u-img">
+                            <img [src]="_trainer.trainer.image | image" alt="trainer">
+                          </div>
+                          <div class="u-text">
+                              <h5>Welcome</h5>  <!-- User NAME -->
+                              <h5 class="text-muted">{{ _trainer.trainer.name }}</h5>  <!-- User EMAIL -->
+
+                          </div>
+                      </div>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a routerLink="/profile"
+                    routerLinkActive="active"><i class="material-icons">mood</i>Profile</a></li>
+
+                  <li role="separator" class="divider"></li>
+
+                  <li><a routerLink="/settings"><i class="material-icons">settings</i>Settings</a></li>
+
+                  <li role="separator" class="divider"></li>
+
+                  <li><a class="logout" (click)="logOut()">
+                    <i class="material-icons">exit_to_app</i>Exit</a></li>
+              </ul>
+          </div>
+      </li>
+     </ul>
+    </div>
+  </nav>
+</header>

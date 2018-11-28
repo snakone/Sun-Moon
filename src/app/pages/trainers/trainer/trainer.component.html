@@ -1,0 +1,31 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body" *ngIf="trainer">
+          <mat-icon class="reset" matTooltip="Go back"
+          (click)="goBack()">reply</mat-icon>
+          <h4 class="card-title">Trainer Profile</h4>
+          <h6 class="card-subtitle">Look up other Trainers</h6>
+          <h3>{{trainer.name}}'s Team</h3>
+          <div class="flex animated fadeIn team">
+            <span *ngFor="let pokemon of trainer.team">
+                <img [src]="urlImage + pokemon.picture + '.png'"
+                     [routerLink]="['/pokemon', pokemon.picture]" class="pkm-team"
+                     [matTooltip]="pokemon.name"/>
+              </span>
+           </div>
+           <div *ngIf="trainer.team.length == 0">
+             {{trainer.name}} don't have a Team!
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="trainer">
+  <sun-moon-team-stats [trainer]="trainer"> </sun-moon-team-stats>
+
+  <sun-moon-team-ranking [trainer]="trainer"></sun-moon-team-ranking>
+</div>

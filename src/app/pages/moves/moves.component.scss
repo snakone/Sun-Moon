@@ -1,0 +1,44 @@
+@import '../../scss/types-box';
+
+.moves {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.move {
+  width: 90%;
+  margin: 0 auto;
+  display: -ms-grid;  /* Grid because we want all moves the same width */
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+  grid-template-columns: repeat(2, auto);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+@media (min-width:1000px) {
+  .move {
+    -ms-grid-columns: (auto)[4];
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
+@media (min-width:1480px){
+  .move {
+    -ms-grid-columns: (auto)[6];
+    grid-template-columns: repeat(6, auto);
+  }
+}
+
+.text-color {
+  color:grey;
+}

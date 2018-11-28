@@ -1,0 +1,31 @@
+h3 {
+  margin: 25px auto;
+  margin-bottom: 20px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.pkm-team {
+  width: 69px;
+  height: 75px;
+  margin-right: 3px;
+}
+
+@media (max-width: 600px){
+  .pkm-team {
+    width: 36px;
+    height: auto;
+  }
+
+}

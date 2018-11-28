@@ -1,0 +1,36 @@
+@import '../../scss/login';
+
+.login-register {
+  background-size: 100% auto;
+}
+
+.signin-box {
+  max-width: 98%;
+  margin: 0 auto;
+  margin-top: -10px;
+  margin-bottom: 11vh;
+}
+
+
+@media (min-width:365px) {
+  .signin-box {
+    width:340px;
+  }
+}
+
+.card-body {
+  margin-bottom: 0;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -5px;
+  position: relative;
+  left: -2px;
+  max-width: 90%!important;
+}
+
+.login-register {
+  padding-bottom: 0;
+}

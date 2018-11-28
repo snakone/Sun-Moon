@@ -1,0 +1,27 @@
+<div class="row animated fadeIn slower">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body" *ngIf="move">
+        <h4 class="card-title">{{move.name}}</h4>
+        <h6 class="card-subtitle">Pokémon Move</h6>
+        <div class="move">
+          <div class="row details">
+            <mat-icon class="reset" matTooltip="Go back"
+            (click)="goBack()">reply</mat-icon>
+            <div class="col-6">
+              <p>Type: <span class="{{move.type}}">{{move.type}}</span></p>
+              <p>Power: <strong>{{move.power}}</strong></p>
+              <p>Hit: <strong>{{move.hit}}</strong></p>
+            </div>
+            <div class="col-6">
+              <p>PP: <strong>{{move.pp}}</strong></p>
+              <p>Attack: <strong>{{move.attack}}</strong></p>
+              <p>Move: <strong>{{move.z}}</strong></p>
+            </div>
+          </div>
+          <span class="info">{{move.info}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

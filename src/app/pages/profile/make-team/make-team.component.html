@@ -1,0 +1,47 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Pokémon Team</h4>
+          <h6 class="card-subtitle">Create or Edit your Team</h6>
+          <mat-icon class="add" matTooltip="Add your Team"
+          (click)="addTeam()">vertical_align_bottom</mat-icon>
+          <mat-icon class="reset" matTooltip="Reload"
+          (click)="reset()">replay</mat-icon>
+          <div class="row">
+            <div class="col-12 pokedex-container">
+              <div cdkDropList #pokedexList="cdkDropList"
+                [cdkDropListData]="pokedex" [cdkDropListConnectedTo]="[teamList]"
+                class="pokedex-list" (cdkDropListDropped)="drop($event)">
+                <img *ngFor="let pokemon of pokedex" cdkDrag class="pkm-pokedex"
+                [src]="urlImage + pokemon.picture + '.png'"
+                [routerLink]="['/pokemon', pokemon.picture]"
+                [matTooltip]="pokemon.name"/>
+                  <sun-moon-loading *ngIf="pokedex.length == 0"></sun-moon-loading>
+              </div>
+
+            </div>
+            <div class="col-12 drag-me">
+              <h4>Drag Pokémon!</h4>
+              <mat-icon>keyboard_arrow_down</mat-icon>
+            </div>
+
+            <div class="col-12 team-container">
+              <div cdkDropList #teamList="cdkDropList"
+                [cdkDropListData]="team" [cdkDropListConnectedTo]="[pokedexList]"
+                class="team-list" (cdkDropListDropped)="drop($event)">
+                <img *ngFor="let pokemon of team" cdkDrag class="pkm-team"
+                [src]="urlImage + pokemon.picture + '.png'"
+                [routerLink]="['/pokemon', pokemon.picture]"
+                [matTooltip]="pokemon.name"/>
+              </div>
+            </div>
+          </div>
+          <button (click)="saveTeam()" [disabled]="team.length <= 0"
+          class="btn btn-success has-waves">MAKE A TEAM</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

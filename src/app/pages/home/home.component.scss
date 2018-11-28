@@ -1,0 +1,109 @@
+.welcome {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+img:hover {
+	cursor: pointer;
+}
+
+.sun {
+  color:orange;
+	font-weight: bold;
+}
+
+.small-text {
+	font-size: .85em;
+}
+
+.moon {
+  color:darkblue;
+	font-weight: bold;
+}
+
+.logo {
+	max-width: 100%;
+	width: 60%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+
+.letters {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.letters p {
+	margin: 25px auto;
+}
+
+.letters p:first-child {
+	margin-top: 0;
+}
+
+.features {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.features img {
+	width: 50px;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.features p {
+	font-size: .7em;
+	font-weight: bold;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+@media (max-width:600px){
+	 .letters {
+		margin-top: 10px;
+	}
+
+	.logo {
+		width: 100%;
+	}
+
+	p {
+		font-size: 1em;
+	}
+
+	.features img {
+		max-width: 70%;
+		height: auto;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+}
+
+.margin-top {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+@media (min-width:600px){
+	.margin-top {
+		margin-top: 30px;
+		margin-bottom: 0;
+	}
+
+	.letters {
+		margin-top: 10px;
+		margin-bottom: 55px;
+	}
+}
+
+.text-center {
+	max-width: 800px;
+	margin: 0 auto;
+}

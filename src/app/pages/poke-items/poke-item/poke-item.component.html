@@ -1,0 +1,22 @@
+<div class="row animated fadeIn slower">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body" *ngIf="pokeitem">
+        <h4 class="card-title">{{pokeitem.item}}</h4>
+        <h6 class="card-subtitle">Held Item</h6>
+        <div class="pokeitem">
+          <div class="row">
+            <mat-icon class="reset" matTooltip="Go back"
+            (click)="goBack()">reply</mat-icon>
+            <div class="col-12">
+              <p><img [src]="urlImage + pokeitem.picture + '.png'" class="item"/></p>
+              <p>Type: <span class="{{pokeitem.type}}">{{pokeitem.type}}</span></p>
+              <p>Grade: <span class="{{pokeitem.grade}} bold">{{pokeitem.grade}}</span></p>
+            </div>
+          </div>
+          <p class="info">{{pokeitem.info}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

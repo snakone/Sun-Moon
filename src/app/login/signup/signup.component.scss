@@ -1,0 +1,70 @@
+@import '../../scss/login';
+@import '../../scss/colors';
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab');
+
+.slogan {
+    margin: 70px auto;
+}
+
+button {
+  margin-top: -10px
+}
+
+h3 {
+  padding: 0 20px;
+  font-family: 'Kelly Slab', cursive;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 30px #000,
+  0 0 40px #000, 0 0 30px #000, 0 0 75px #000, 2px 2px 20px rgba(0,153,17,0);
+  margin: 70px auto;
+  font-size: calc(1.5em + 1vmin);
+}
+
+@media (min-width: 625px){
+  h3 {
+    font-size: calc(1.5em + 2vmin);
+    line-height: 40px;
+    padding: 0 60px;
+    margin: 100px auto;
+  }
+}
+
+@media (min-width: 900px){
+  h3 {
+    line-height: 50px;
+    padding: 0 50px;
+  }
+
+}
+
+@media (min-width: 1385px){
+  h3 {
+    padding: 0 150px;
+    line-height: 65px;
+    font-size: calc(2.2em + 2vmin);
+  }
+}
+
+.underline {
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+@media (min-width:1525px){
+  .slogan {
+    padding: 0 200px;
+  }
+}
+
+@media (min-width:1625px){
+  .slogan {
+    padding: 0 250px;
+  }
+}
+
+@media (min-width:1625px){
+  .slogan {
+    padding: 0 350px;
+  }
+}

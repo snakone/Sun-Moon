@@ -1,0 +1,26 @@
+@import './colors';
+
+.Normal, .Fighting, .Flying, .Poison, .Ground, .Rock, .Bug, .Ghost, .Steel,
+.Fire, .Water, .Grass, .Electric, .Psychic, .Ice, .Dragon, .Dark, .Fairy, .Battle {
+  font-weight: bold;
+}
+
+.Normal {color:$Normal;}
+.Fighting {color:$Fighting;}
+.Flying {color:$Flying;}
+.Poison {color:$Poison;}
+.Ground {color:$Ground;}
+.Rock {color:$Rock;}
+.Bug {color:$Bug;}
+.Ghost {color:$Ghost;}
+.Steel {color:$Steel;}
+.Fire {color:$Fire;}
+.Water {color:$Water;}
+.Grass {color:$Grass;}
+.Electric {color:$Electric;}
+.Psychic {color:$Psychic;}
+.Ice {color:$Ice;}
+.Dragon {color:$Dragon;}
+.Dark {color:$Dark;}
+.Fairy {color:$Fairy;}
+.Battle {color: grey};

@@ -1,0 +1,17 @@
+<h3>
+  Type: <span class="bold {{selection.type}}">{{selection.type}}</span>
+</h3>
+<h3>
+  Stat: <span class="bold {{selection.stat}}">{{selection.stat}}</span>
+</h3>
+<h3>
+  Evolution: <span class="bold {{selection.evolution}}">{{selection.evolution | type}}</span>
+</h3>
+
+<div class="flex">
+    <span class="animated fadeIn" *ngFor="let pokemon of pokemons">
+      <img [src]="urlImage + pokemon.picture + '.png'"
+        [routerLink]="['/pokemon', pokemon.picture]" class="pokemon"
+        [matTooltip]="pokemon.name"/>
+    </span>
+</div>

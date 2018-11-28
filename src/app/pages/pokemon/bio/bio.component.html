@@ -1,0 +1,20 @@
+<div class="bio animated fadeIn">
+  <div class="row">
+    <div class="col-12">
+        <p class="info">{{pokemon.info}}</p>
+        <span class="type {{pokemon.type}} bottom">{{pokemon.type}}</span>
+        <span *ngIf="pokemon.type2 != 'None'"
+        class="type {{pokemon.type2}}">{{pokemon.type2}}</span>
+        <br>
+        <h4>Family</h4>
+        <div class="familiars" [ngClass]="{'length8': familiars.length == 8,
+                                           'length6': familiars.length == 6}">
+          <img [src]="urlImage + familiar.picture + '.png'"
+          *ngFor="let familiar of familiars" class="pokemon"
+          [ngClass]="{'same': familiar.picture == pokemon.picture}"
+          [routerLink]="['/pokemon', familiar.picture]"
+          >
+        </div>
+    </div>
+  </div>
+</div>

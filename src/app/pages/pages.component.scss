@@ -1,0 +1,23 @@
+#Pikachu {
+	  opacity: 0.7;
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 25px; /* Place the button at the bottom of the page */
+    right: -45px; /* Place the button 25px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+	  font-weight:bold;
+	  float:right;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.pika {
+	max-width: 100px;
+	height: auto;
+}
+
+.container-fluid {
+  padding-bottom: 0;
+}

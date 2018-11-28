@@ -1,0 +1,28 @@
+<div class="antiMarginTop">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab>
+        <ng-template mat-tab-label>
+          <img class="icon" src="{{urlImage}}pikachu.png">
+        </ng-template>
+        <app-search-pokemon [pokemons]="pokemons"></app-search-pokemon>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+          <img class="icon" src="{{urlImage}}trainer.png">
+        </ng-template>
+        <app-search-trainers [trainers]="trainers"></app-search-trainers>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+          <img class="icon" src="{{urlImage}}move.png">
+        </ng-template>
+        <app-search-moves [moves]="moves"></app-search-moves>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+          <img class="icon" src="{{urlImage}}poke-item.png">
+        </ng-template>
+        <app-search-poke-items [pokeitems]="pokeitems"></app-search-poke-items>
+    </mat-tab>
+</mat-tab-group>
+</div>

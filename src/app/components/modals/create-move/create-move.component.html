@@ -1,0 +1,121 @@
+<h2 mat-dialog-title>New Move</h2>
+<mat-dialog-content class="mat-typography">
+  <p>Here You can add a new Move.</p>
+    <form [formGroup]="moveForm"
+      class="floating-labels p-t-20 p-b-10">
+
+      <!-- NAME -->
+        <div class="form-group has-feedback"
+          [ngClass]="moveForm.controls.name.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="text" placeholder="Name"
+            formControlName="name" name="name"
+          [ngClass]="moveForm.controls.name.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+
+      <!-- Z -->
+        <div class="form-group has-feedback"
+          [ngClass]="moveForm.controls.z.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="text" placeholder="Z?"
+            formControlName="z" name="z"
+          [ngClass]="moveForm.controls.z.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+      <!-- POWER -->
+      <div class="form-group has-feedback"
+        [ngClass]="moveForm.controls.power.invalid == true ?
+         'has-danger' : 'has-success'">
+          <div class="input-group">
+          <input type="number" placeholder="Power"
+          formControlName="power" name="power"
+        [ngClass]="moveForm.controls.power.invalid == true ?
+         'form-control-danger' : 'form-control-success'"
+          class="form-control form-control-danger">  </div>
+      </div>
+
+      <!-- HIT -->
+      <div class="form-group has-feedback"
+        [ngClass]="moveForm.controls.hit.invalid == true ?
+         'has-danger' : 'has-success'">
+          <div class="input-group">
+          <input type="number" placeholder="Hit Rate"
+          formControlName="hit" name="hit"
+        [ngClass]="moveForm.controls.hit.invalid == true ?
+         'form-control-danger' : 'form-control-success'"
+          class="form-control form-control-danger">  </div>
+      </div>
+
+      <!-- PP -->
+      <div class="form-group has-feedback"
+        [ngClass]="moveForm.controls.pp.invalid == true ?
+         'has-danger' : 'has-success'">
+          <div class="input-group">
+          <input type="number" placeholder="PP"
+          formControlName="pp" name="pp"
+        [ngClass]="moveForm.controls.pp.invalid == true ?
+         'form-control-danger' : 'form-control-success'"
+          class="form-control form-control-danger">  </div>
+      </div>
+
+      <!-- TYPE -->
+        <div class="form-group has-feedback"
+          [ngClass]="moveForm.controls.type.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="type" name="type"
+              [ngClass]="moveForm.controls.type.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Type</option>
+                <option value="{{type}}" *ngFor="let type of types">{{type}}</option>
+              </select>
+            </div>
+        </div>
+
+      <!-- ATTACK -->
+        <div class="form-group has-feedback"
+          [ngClass]="moveForm.controls.attack.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="attack" name="attack"
+              [ngClass]="moveForm.controls.attack.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Attack Type</option>
+                <option value="Physical">Physical</option>
+                <option value="Special">Special</option>
+                <option value="Status">Status</option>
+              </select>
+            </div>
+        </div>
+
+      <!-- INFO -->
+        <div class="form-group has-feedback"
+          [ngClass]="moveForm.controls.info.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <textarea type="text" placeholder="Info"
+            formControlName="info" name="info"
+            [ngClass]="moveForm.controls.info.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger space"></textarea>  </div>
+        </div>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button type="submit" (click)="onSubmit()" [mat-dialog-close]="true"
+  [disabled]="moveForm.invalid" class="btn btn-primary btn-success">
+  CREATE
+  </button>
+  <button type="button" (click)="closeModal()"
+  class="btn btn-primary btn-error">CANCEL</button>
+</mat-dialog-actions>

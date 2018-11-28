@@ -1,0 +1,127 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Pokémon Laboratory</h4>
+        <h6 class="card-subtitle">Find the Perfect Pokémon</h6>
+        <div class="animated fadeIn slower">
+              <div class="horizontal">
+                <mat-icon class="reset" matTooltip="Reload"
+                (click)="reset()">replay</mat-icon>
+                <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                  <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Type</ng-template>
+
+                  <div class="type-grid">
+                    <mat-radio-group formControlName="type">
+                      <span (click)="setType(type)"
+                      *ngFor="let type of types" class="type {{type}}">{{type}}</span>
+                    </mat-radio-group>
+                  </div>
+
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup">
+                  <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Stat</ng-template>
+
+                    <div class="stat-grid">
+                      <mat-radio-group formControlName="stat">
+                        <mat-radio-button color="primary" class="example-radio-button"
+                        *ngFor="let stat of stats" [value]="stat">
+                        <span class="bold {{stat}} small">{{stat}}</span></mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="thridFormGroup">
+                  <form [formGroup]="thridFormGroup">
+                    <ng-template matStepLabel>Evolution</ng-template>
+
+                    <div class="evolution-grid">
+                      <mat-radio-group formControlName="evolution">
+                        <mat-radio-button color="primary" class="example-radio-button"
+                        *ngFor="let evolution of evolutions; let i = index" [value]="i+1">
+                        <strong class="small">{{evolution | uppercase}}</strong></mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+
+                  </form>
+                </mat-step>
+              </mat-horizontal-stepper>
+             </div>
+
+             <div class="register vertical">
+               <mat-icon class="reset" (click)="reset()">replay</mat-icon>
+               <mat-vertical-stepper [linear]="isLinear" #stepper>
+               <mat-step [stepControl]="firstFormGroup">
+                 <form [formGroup]="firstFormGroup">
+                   <ng-template matStepLabel>Type</ng-template>
+
+                     <mat-form-field class="selectField">
+                       <mat-select placeholder="Select Type" formControlName="type">
+                         <mat-option value="Any">Any</mat-option>
+                         <mat-option [value]="type" *ngFor="let type of types">
+                           {{type}}
+                         </mat-option>
+                       </mat-select>
+                     </mat-form-field>
+
+                 </form>
+               </mat-step>
+               <mat-step [stepControl]="secondFormGroup">
+                 <form [formGroup]="secondFormGroup">
+                   <ng-template matStepLabel>Stat</ng-template>
+
+                   <mat-form-field class="selectField">
+                     <mat-select placeholder="Select Stat" formControlName="stat">
+                       <mat-option value="Any">Any</mat-option>
+                       <mat-option [value]="stat" *ngFor="let stat of stats">
+                         {{stat}}
+                       </mat-option>
+                     </mat-select>
+                   </mat-form-field>
+
+                 </form>
+               </mat-step>
+               <mat-step [stepControl]="thridFormGroup">
+                 <form [formGroup]="thridFormGroup">
+                   <ng-template matStepLabel>Evolution</ng-template>
+
+                   <mat-form-field class="selectField">
+                     <mat-select placeholder="Select Evolution" formControlName="evolution">
+                       <mat-option value="Any">Any</mat-option>
+                       <mat-option *ngFor="let evolution of evolutions; let i = index" [value]="i+1">
+                         {{evolution}}
+                       </mat-option>
+                     </mat-select>
+                   </mat-form-field>
+
+                 </form>
+               </mat-step>
+             </mat-vertical-stepper>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="text-center" *ngIf="pokemons.length == 0">
+          <h5 class="m-top">Welcome to the Laboratory!</h5>
+          <h6>Your favorite place as a Trainer!</h6>
+        </div>
+        <sun-moon-result  *ngIf="pokemons.length > 0 && !loading"
+        [pokemons]="pokemons" [selection]="selection"></sun-moon-result>
+        <sun-moon-loading *ngIf="loading"></sun-moon-loading>
+      </div>
+    </div>
+  </div>
+</div>

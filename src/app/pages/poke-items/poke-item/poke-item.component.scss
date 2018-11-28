@@ -1,0 +1,38 @@
+@import '../../../scss/types-text';
+@import '../../../scss/item-grade';
+
+.pokeitem {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 600px){
+  .details {
+    font-size: .8em;
+  }
+}
+
+.item {
+  width: 56px;
+  margin: 0 2px;
+}
+
+.info {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0;
+  font-size: .8em;
+}
+
+.reset {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+  color: black;
+}

@@ -1,0 +1,21 @@
+@import '../../../scss/types-box';
+
+.flex {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 15px 10px;
+}
+
+.m-t-35 {
+  margin-top: 35px;
+}
+
+.last {
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}

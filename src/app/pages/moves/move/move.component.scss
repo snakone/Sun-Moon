@@ -1,0 +1,37 @@
+@import '../../../scss/types-text';
+
+.move {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.details {
+  max-width: 350px;
+  margin: 10px auto;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px){
+  .details {
+    font-size: .8em;
+  }
+}
+
+.info {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: .8em;
+}
+
+.reset {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+  color: black;
+}

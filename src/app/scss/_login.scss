@@ -1,0 +1,26 @@
+.login-register {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  padding: 2em 0;
+  overflow: hidden;
+  background-image:url(../../../assets/images/background/mobile.jpg);
+}
+
+@media (min-width:1000px){
+  .login-register {
+    background-image:url(../../../assets/images/background/desktop.jpg);
+  }
+}
+
+.login-box {
+  max-width: 98%;
+  margin: 20px auto; }
+  .login-box .footer {
+    width: 100%;
+    left: 0px;
+    right: 0px; }
+  .login-box .social {
+    display: block;
+    margin-bottom: 30px; }

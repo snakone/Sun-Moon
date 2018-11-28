@@ -1,0 +1,39 @@
+<aside class="left-sidebar">  <!-- Sidebar scroll-->
+   <div class="scroll-sidebar">  <!-- Sidebar navigation-->
+   <nav class="sidebar-nav">
+       <ul id="sidebarnav">
+         <li class="user-profile">  <!-- Account Menu -->
+         <a class="has-arrow waves-effect waves-dark" aria-expanded="true">
+           <img [src]="_trainer.trainer.image | image" alt="trainer"/>
+           <span class="hide-menu menu-title-profile">{{ _trainer.trainer.name }}</span></a>
+             <ul aria-expanded="true" class="collapse">
+               <li><a (click)="closeBar()" routerLink="/profile"
+                 routerLinkActive="active">Profile</a></li>
+               <li><a (click)="closeBar()" routerLink="/settings"
+                 routerLinkActive="active">Settings</a></li>
+               <li><a class="logout" (click)="logOut()">Exit</a></li>
+             </ul>
+         </li>
+
+         <li  class="nav-devider"></li>
+
+         <li class="nav-small-cap">
+           <span class="sun">SUN</span> & <span class="moon">MOON</span>
+         </li>
+         <li *ngFor="let menu of _sidebar.menu">  <!-- NgFor Menu -->
+           <a class="has-arrow waves-effect waves-dark" aria-expanded="true">
+             <img class="icon" [src]="menu.icon"/>
+             <span class="hide-menu menu-title">{{menu.title}}
+               <span class="label label-rouded label-themecolor pull-right">{{menu.subMenu.length}}</span>
+             </span>
+           </a>
+             <ul aria-expanded="true" class="collapse">
+               <li *ngFor="let subMenu of menu.subMenu">
+                 <a (click)="closeBar()" [routerLink]="[subMenu.URL]" routerLinkActive="active">{{subMenu.title}}</a>
+               </li>
+             </ul>
+          </li>
+       </ul>
+   </nav>  <!-- End Sidebar navigation -->
+   </div>  <!-- End Sidebar scroll-->
+ </aside>

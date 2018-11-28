@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+strong {
+  font-weight: bold;
+}
+
+a:hover {
+  color: #139fe5;
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.material-icons {
+  margin-top: -1px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.logout:hover {
+  color: red!important;
+  font-weight: bold;
+}
+
+.marginTop {
+  margin-top: 35px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:disabled {
+  background: grey;
+}
+
+.HP {color: #86F83A}
+.ATK {color: #f8c23a}
+.DEF {color: #F86B3A}
+.S\.ATK {color: #F83A3A}
+.S\.DEF {color: #3A98F8}
+.SPD {color: #673AF8}
+.SS {color: black}
+
+mat-icon {
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}

@@ -1,0 +1,29 @@
+.login-box {
+  max-width: 98%;
+  margin: 0 auto;
+  margin-bottom: 20px;}
+  .login-box .footer {
+    width: 100%;
+    left: 0px;
+    right: 0px; }
+  .login-box .social {
+    display: block;
+    margin-bottom: 20px;}
+
+h3 {
+  margin-bottom: 30px;
+}
+
+@media (min-width:365px) {
+  .login-box {
+    width:340px;
+  }
+}
+
+.card-body {
+  padding-bottom: 0;
+}
+
+.m-t--40 {
+  margin-top: -40px;
+}

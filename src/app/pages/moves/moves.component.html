@@ -1,0 +1,42 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            <input (keyup)="onKeyUp($event)"
+            [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Move...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Moves registered
+            (<small><strong>{{count}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Displaying Moves...</h6>
+          <br>
+          <div class="move animated fadeIn moves" *ngIf="moves">
+          <span class="type {{move.type}}" *ngFor="let move of filteredMoves"
+          [ngClass]="{'text-color': move.type == 'Ice' || move.type == 'Electric'}"
+          [routerLink]="['/move/', move.name | move]">
+          {{move.name}}</span>
+          </div>
+          <sun-moon-loading *ngIf="moves.length == 0"></sun-moon-loading>
+
+          <div *ngIf="moves && filteredMoves">
+            <div *ngIf="filteredMoves.length == 0 && moves.length > 0"
+              class="text-center">
+             No <strong>Move</strong> match "<strong>{{searchValue}}</strong>".
+             Please try again.
+           </div>
+          </div>
+
+          </div>
+        </div>
+     </div>
+    </div>
+</div>

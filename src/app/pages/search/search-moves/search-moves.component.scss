@@ -1,0 +1,22 @@
+@import '../../../scss/types-box';
+
+.moves {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-color {
+  color:grey;
+}
+
+.text-center {
+  font-size: .8em;
+}

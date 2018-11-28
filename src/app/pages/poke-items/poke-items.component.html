@@ -1,0 +1,44 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            <input (keyup)="onKeyUp($event)"
+            [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Held Item...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Held Items registered
+            (<small><strong>{{count}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Displaying Held Items...</h6>
+          <br>
+          <div class="flex animated fadeIn pokeitems" *ngIf="pokeitems">
+            <span *ngFor="let pokeitem of filteredPokeItems" >
+                <img [src]="urlImage + pokeitem.picture + '.png'"
+                  [routerLink]="['/poke-item', pokeitem.picture]" class="pokeitem"
+                  [matTooltip]="pokeitem.item"/>
+              </span>
+           </div>
+
+          <sun-moon-loading *ngIf="pokeitems.length == 0"></sun-moon-loading>
+
+          <div *ngIf="pokeitems && filteredPokeItems">
+            <div *ngIf="filteredPokeItems.length == 0 && pokeitems.length > 0"
+              class="text-center">
+             No <strong>Held Item</strong> match "<strong>{{searchValue}}</strong>".
+             Please try again.
+           </div>
+          </div>
+
+          </div>
+        </div>
+     </div>
+    </div>
+</div>

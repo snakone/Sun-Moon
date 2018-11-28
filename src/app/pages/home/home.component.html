@@ -1,0 +1,87 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Welcome Trainer</h4>
+          <h6 class="card-subtitle">Pokémon Remake for Mobile</h6>
+          <div class="welcome">
+            <img class="logo" src="../../../assets/images/logo-home.png"/>
+            <div class="letters">
+              <p>
+                You are in the right place. This site was made to help any
+                Trainer out there in their adventures on either
+                "<strong>Sun & Moon</strong>" or "<strong>Pocketown</strong>"
+                games for Mobile.
+              </p>
+              <p>Our Team have been gather <strong>manually</strong> many of
+                the game data and put it together in the following application.
+              </p>
+
+              <p>Don't miss anything about your favourite Pokémon game!</p>
+             </div>
+          </div>
+
+          <div class="row features">
+            <div class="col-4">
+              <section align="center">
+                  <img [src]="urlImage + 'trainer.png'" alt="" />
+                  <p>Trainer Profile</p>
+              </section>
+            </div>
+            <div class="col-4">
+              <section align="center">
+                  <img [src]="urlImage + 'map.png'" alt="" />
+                  <p>Exclusive Guides</p>
+              </section>
+            </div>
+            <div class="col-4">
+              <section align="center">
+                  <img [src]="urlImage + 'mobile.png'" alt="" />
+                  <p>100% Mobile</p>
+              </section>
+            </div>
+          </div>
+
+          <div class="row features margin-top">
+            <div class="col-4">
+              <section align="center">
+                  <img [src]="urlImage + 'egg.png'" alt="" />
+                  <p>{{pokemonCount}} Pokémon</p>
+              </section>
+            </div>
+            <div class="col-4">
+              <section align="center">
+                  <img [src]="urlImage + 'fist.png'" alt="" />
+                  <p>{{moveCount}} Moves</p>
+              </section>
+            </div>
+            <div class="col-4">
+              <section align="center">
+                  <img [src]="urlImage + 'berry.png'" alt="" />
+                  <p>{{pokeItemCount}} Held Items</p>
+              </section>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body text-center small-text">
+          <span class="sun">Sun</span> & <span class="moon">Moon</span>
+          {{year}} All rights reserved &copy;
+          <br>
+          This content is <strong>not</strong> related with <strong>Tutu</strong> &copy;
+          <br>
+          Pokémon is a trademark by <strong>Nintendo</strong> &copy;
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

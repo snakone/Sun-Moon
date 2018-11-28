@@ -1,0 +1,93 @@
+@import '../../../scss/types-text';
+
+.victory {
+  max-width: 800px;
+  font-size: .9em;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+img {
+  max-width: 100%;
+  margin: 10px auto;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+h5 {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+iframe {
+  width: 100%;
+  margin: 20px auto;
+  margin-bottom: 30px;
+}
+
+.youtube {
+  height:300px;
+  max-width: 600px;
+}
+
+hr.separator {
+	width:90%;
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+	border-radius:3px;
+  margin: 40px auto;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+ol {
+  margin-top: 15px;
+  color: #ccc;
+  list-style-type: none;
+}
+
+.index li {
+  position: relative;
+  font: bold italic 20px/1.5 Helvetica, Verdana, sans-serif;
+  padding-top: 10px;
+}
+
+.list {
+  position: absolute;
+  left: -25px;
+  top: 7px;
+}
+
+.coverage {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pokemon {
+  width: 40px;
+  height: 45px;
+  margin:0 5px;
+}
+
+.must {
+  max-width: 500px;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.item {
+  border: none;
+  margin: 10px 5px;
+  width: 40px;
+  height: auto;
+}

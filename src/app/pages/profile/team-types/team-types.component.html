@@ -1,0 +1,56 @@
+<div class="row" *ngIf="trainer.team.length > 0">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+      <h4 class="card-title">Strengths and Weaknesses</h4>
+      <h6 class="card-subtitle">Is your Team good enough?</h6>
+        <div class="text-center m-t-30">
+
+          <div *ngIf="teamTypes.strong.length > 0">
+            <h5>Your Team is <strong>Strong</strong> against..</h5>
+            <div class="flex">
+              <span class="type {{strong}}"
+              *ngFor="let strong of teamTypes.strong">{{strong}}</span>
+            </div>
+          </div>
+
+          <div *ngIf="teamTypes.weak.length > 0">
+            <h5>Your Team is <strong>Not</strong> Strong against..</h5>
+            <div class="flex">
+              <span class="type {{weak}}"
+              *ngFor="let weak of teamTypes.weak">{{weak}}</span>
+            </div>
+          </div>
+
+          <hr>
+
+          <div *ngIf="teamTypes.effective.length > 0">
+            <h5 class="m-t-35">Your Team is <strong>Weak</strong> against..</h5>
+            <div class="flex">
+              <span class="type {{effective}}"
+              *ngFor="let effective of teamTypes.effective">{{effective}}</span>
+            </div>
+          </div>
+
+          <div *ngIf="teamTypes.half.length > 0">
+            <h5>Your Team is <strong>Not</strong> Weak against..</h5>
+            <div class="flex" [ngClass]="{'last': teamTypes.invulnerable.length <= 0}">
+              <span class="type {{half}}"
+              *ngFor="let half of teamTypes.half">{{half}}</span>
+            </div>
+          </div>
+
+          <div *ngIf="teamTypes.invulnerable.length > 0">
+            <hr>
+            <h5 class="m-t-35">Your Team is <strong>Invulnerable</strong> against..</h5>
+            <div class="flex last">
+              <span class="type {{invulnerable}}"
+              *ngFor="let invulnerable of teamTypes.invulnerable">{{invulnerable}}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

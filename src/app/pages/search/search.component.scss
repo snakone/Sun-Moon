@@ -1,0 +1,27 @@
+.antiMarginTop {
+  margin-top: -20px;
+}
+
+::ng-deep .mat-tab-label {
+  min-width: auto;
+  max-width: 50px!important;
+  padding: 0 5px!important;
+}
+
+::ng-deep .mat-tab-body-content {
+  overflow: hidden !important;
+}
+
+::ng-deep .mat-tab-header {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+::ng-deep .mat-tab-labels {
+    justify-content: center!important; /* align items in Main Axis */
+}
+
+.icon {
+  width: 20px;
+  margin: 0 2px;
+}

@@ -1,0 +1,26 @@
+<div class="row trainers">
+  <div class="col-12">
+      <div class="card-body">
+        <div class="flex animated fadeIn slower" *ngIf="trainers.length > 0">
+          <div *ngFor="let trainer of trainers" class="trainer-card">
+            <div class="card card-danger-info">
+              <div class="card-header bg-theme">
+              <h4 class="m-b-0 text-white">{{trainer.name}}</h4></div>
+                <div class="card-body shadow text-center hvr-underline-from-left">
+                  <p class="card-text">
+                  <img (click)="openImageDialog(trainer)" [src]="trainer.image | image"
+                    class="profile-picture img-circle"
+                    data-toggle="tooltip" data-placement="top" title="Cambiar"/>
+                  </p>
+                </div>
+              </div>
+            </div>
+         </div>
+
+         <div *ngIf="trainers.length == 0" class="text-center">
+            No <strong>Trainer</strong> match. Please try again.
+         </div>
+
+        </div>
+  </div>
+</div>

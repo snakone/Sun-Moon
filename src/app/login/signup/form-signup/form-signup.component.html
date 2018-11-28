@@ -1,0 +1,104 @@
+<div class="login-box card animated fadeIn slow m-t--40">
+  <div class="card-body">
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()"
+     class="floating-labels">
+        <h3 class="box-title m-b-30 text-center">Register a <strong>new</strong> Trainer Account!</h3>
+
+          <!-- NAME -->
+          <div class="form-group has-feedback m-b-20"
+            [ngClass]="signUpForm.controls.name.invalid == true ?
+             'has-danger' : 'has-success'">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="ti-user"></i></div>
+                  <input type="text" formControlName="name" name="name"
+                  [ngClass]="signUpForm.controls.name.invalid &&
+                  !signUpForm.controls.name.pristine == true ?
+                 'form-control-danger' : 'form-control-success'"
+                  class="form-control" placeHolder="Trainer Name">
+              </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group has-feedback m-b-20"
+            [ngClass]="signUpForm.controls.email.invalid == true ?
+             'has-danger' : 'has-success'">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="ti-email"></i></div>
+                  <input type="text" formControlName="email" name="email"
+                  [ngClass]="signUpForm.controls.email.invalid &&
+                  !signUpForm.controls.email.pristine == true ?
+                 'form-control-danger' : 'form-control-success'"
+                  class="form-control" placeHolder="Email">
+             </div>
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="form-group has-feedback m-b-20"
+            [ngClass]="signUpForm.controls.password.invalid == true ?
+             'has-danger' : 'has-success'">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="ti-unlock"></i></div>
+                  <input type="password" placeHolder="Password"
+                  formControlName="password" name="password"
+                  [ngClass]="signUpForm.controls.password.invalid &&
+                  !signUpForm.controls.password.pristine == true ?
+                 'form-control-danger' : 'form-control-success'"
+                  class="form-control">
+             </div>
+          </div>
+
+          <!-- PASSWORD MATCH-->
+          <div class="form-group m-b-20"
+            [ngClass]="signUpForm.controls.passwordMatch.invalid == true ?
+             'has-danger' : 'has-success'">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="ti-lock"></i></div>
+                  <input type="password" placeHolder="Repeat Password"
+                  formControlName="passwordMatch" name="passwordMatch"
+                  [ngClass]="matchError == true &&
+                  !signUpForm.controls.password.pristine == true ?
+                 'form-control-danger' : 'form-control-success'"
+                  class="form-control">
+             </div>
+          </div>
+
+        <div class="form-group m-t-30 text-center">
+            <div class="col-md-12">
+                <div class="checkbox checkbox-success p-t-0">   <!-- CHECK BOX -->
+                    <input formControlName="conditions" name="conditions"
+                    type="checkbox" class="filled-in chk-col-light-blue checkbox" id="checkbox-signup">
+                    <label for="checkbox-signup">Accept all <a href="">Trainer Terms</a></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group text-center m-t-25">
+            <div class="col-xs-12">
+                <button class="btn btn-info btn-lg btn-block
+                              btn-rounded text-uppercase waves-effect waves-light"
+                              type="submit" [disabled]="signUpForm.invalid">JOIN!</button>
+            </div>
+        </div>
+        <div class="form-group m-b-5">
+            <div class="col-sm-12 text-center">
+                Already a Trainer?
+                <a routerLink="/signin" class="text-info m-l">
+                  <p class="text-center">Sign In</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+                <div class="social">
+                    <button id="google" type="button" class="btn btn-googleplus"
+                      data-toggle="tooltip">
+                      <i aria-hidden="true" class="fa fa-google"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+  </div>
+</div>

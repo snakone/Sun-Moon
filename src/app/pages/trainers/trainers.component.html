@@ -1,0 +1,72 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            <input (keyup)="onKeyUp($event)"
+            [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Trainer...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card overflow">
+        <div class="card-body">
+          <h4 class="card-title">Trainers registered
+            (<small><strong>{{count}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Displaying Trainers...</h6>
+          <br>
+          <div class="row animated fadeIn" id="rows" *ngIf="trainers.length > 0">
+            <div *ngFor="let trainer of filteredTrainers" class="col-12 trainer-card">
+
+                <div class="card" [routerLink]="['/trainer/', trainer.name]">
+                  <div class="card-body shadow text-center hvr-underline-from-left">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6 no-padding">
+                        <img [src]="trainer.image | image"
+                          class="profile-picture img-circle"/>
+                        <span class="text-themecolor bold">{{trainer.name}}</span>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <span class="grid">
+                          <img [src]="urlImage + pokemon.picture + '.png'"
+                               *ngFor="let pokemon of trainer.team"
+                               class="pokemon"/>
+
+                         <span class="no-trainer" *ngIf="trainer.team.length == 0">
+                           This Trainer have no team yet!</span>
+                        </span>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+             </div>
+           </div>
+
+          <sun-moon-loading *ngIf="trainers.length == 0"></sun-moon-loading>
+
+          <div *ngIf="trainers && filteredTrainers">
+            <div *ngIf="filteredTrainers.length == 0 && trainers.length > 0"
+              class="text-center">
+             No <strong>Trainer</strong> match "<strong>{{searchValue}}</strong>".
+             Please try again.
+           </div>
+          </div>
+
+          <div *ngIf="count > limit" class="center back-next">
+            <button [disabled]="from < limit" (click)="changeFrom(-limit)"
+            class="btn btn-secondary">Previous</button>
+            <button [disabled]="from + limit >= count" (click)="changeFrom(limit)"
+            class="btn btn-secondary">Next</button>
+          </div>
+
+          </div>
+        </div>
+     </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.sun, .moon {
+  font-size: 1.2em
+}
+
+.sun {
+  color:orange
+}
+
+.moon {
+  color:darkblue
+}
+
+.icon {
+  vertical-align: bottom;
+  width: 24px;
+  height: 24px;
+}
+
+.has-arrow:hover .icon {
+  filter: brightness(1.1);
+}
+
+.menu-title-profile {
+  margin-left: 10px;
+}

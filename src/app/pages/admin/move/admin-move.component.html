@@ -1,0 +1,55 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+
+            <input (keyup)="onKeyUp($event)" [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Move...">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Moves registered (<small><strong>{{totalMoves}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Move Admin Panel</h6>
+          <div>
+            <button (click)="openMoveDialog()" type="button"
+             class="btn waves-effect waves-light btn-rounded btn-success create">
+             NEW MOVE
+            </button>
+          </div>
+          <br>
+
+          <table *ngIf="filteredMoves.length > 0" class="table table-striped">
+            <thead>
+              <th>Move</th>
+              <th>Actions</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let move of filteredMoves">
+                <td class="little">{{move.name}}</td>
+                <td>
+                  <i (click)="editMove(move)" class="fa fa-edit" title="Edit"></i>
+                  <i (click)="deleteMove(move)" class="fa fa-trash-o" title="Deleete"></i>
+                </td>
+              </tr>
+            </table>
+
+
+            <sun-moon-loading *ngIf="moves.length == 0"></sun-moon-loading>
+
+             <div *ngIf="filteredMoves.length == 0 && moves.length > 0" class="text-center">
+                No <strong>Move</strong> match "<strong>{{searchValue}}</strong>". Please try again.
+             </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

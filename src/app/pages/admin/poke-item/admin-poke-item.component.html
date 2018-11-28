@@ -1,0 +1,53 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            <input (keyup)="onKeyUp($event)" [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Held Item...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Held Items registered (<small><strong>{{totalPokeItems}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Held Item Admin Panel</h6>
+          <div>
+            <button (click)="openPokeItemDialog()" type="button"
+             class="btn waves-effect waves-light btn-rounded btn-success create">
+             NEW HELD ITEM
+            </button>
+          </div>
+          <br>
+
+          <table *ngIf="filteredPokeItems.length > 0" class="table table-striped">
+            <thead>
+              <th>Held Item</th>
+              <th>Actions</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pokeitem of filteredPokeItems">
+                <td class="little">{{pokeitem.item}}</td>
+                <td>
+                  <i (click)="editPokeItem(pokeitem)" class="fa fa-edit" title="Edit"></i>
+                  <i (click)="deletePokeItem(pokeitem)" class="fa fa-trash-o" title="Delete"></i>
+                </td>
+              </tr>
+            </table>
+
+
+            <sun-moon-loading *ngIf="pokeitems.length == 0"></sun-moon-loading>
+
+             <div *ngIf="filteredPokeItems.length == 0 && pokeitems.length > 0" class="text-center">
+                No <strong>Held Item</strong> match "<strong>{{searchValue}}</strong>". Please try again.
+             </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="row" *ngIf="trainer.team.length > 0">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+      <h4 class="card-title">Pokémon Ranking</h4>
+      <h6 class="card-subtitle">Which Pokémon is your best?</h6>
+
+        <div class="text-center m-t-30">
+          <h4>Your best Pokémon is...</h4>
+          <h3>{{pokemonSS.name}}</h3>
+        </div>
+
+        <div class="ranking">
+          <p>
+            <img class="effort"
+            [src]="urlImage + 'hp-effort.png'"/>{{pokemonHP.name}}:
+            <strong>{{maxSS}}</strong>
+          </p>
+          <p>
+            <img class="effort"
+            [src]="urlImage + 'atk-effort.png'"/>{{pokemonATK.name}}:
+            <strong>{{maxATK}}</strong>
+          </p>
+          <p>
+            <img class="effort"
+            [src]="urlImage + 'def-effort.png'"/>{{pokemonDEF.name}}:
+            <strong>{{maxDEF}}</strong>
+          </p>
+          <p>
+            <img class="effort"
+            [src]="urlImage + 'satk-effort.png'"/>{{pokemonSATK.name}}:
+            <strong>{{maxSATK}}</strong>
+          </p>
+          <p>
+            <img class="effort"
+            [src]="urlImage + 'sdef-effort.png'"/>{{pokemonSDEF.name}}:
+            <strong>{{maxSDEF}}</strong>
+          </p>
+          <p class="m-b-0">
+            <img class="effort"
+            [src]="urlImage + 'spd-effort.png'"/>{{pokemonSPD.name}}:
+            <strong>{{maxSPD}}</strong>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

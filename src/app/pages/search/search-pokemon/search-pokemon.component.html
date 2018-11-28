@@ -1,0 +1,19 @@
+<div class="row pokemons">
+  <div class="col-12">
+      <div class="card-body">
+        <div class="flex animated fadeIn slower" *ngIf="pokemons">
+          <span *ngFor="let pokemon of pokemons" >
+              <img [src]="urlImage + pokemon.picture + '.png'"
+                class="pokemon"
+                [matTooltip]="pokemon.name"
+                [routerLink]="['/pokemon', pokemon.picture]"/>
+            </span>
+         </div>
+
+         <div *ngIf="pokemons.length == 0" class="text-center">
+             No <strong>Pokémon</strong> match. Please try again.
+         </div>
+
+        </div>
+  </div>
+</div>

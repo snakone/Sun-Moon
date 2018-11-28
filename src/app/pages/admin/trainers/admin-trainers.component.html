@@ -1,0 +1,58 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            <input (keyup)="onKeyUp($event)" [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Trainer...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card" style="overflow:hidden">
+        <div class="card-body">
+          <h4 class="card-title">Trainers registered (<small><strong>{{totalTrainers}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Trainer Admin Panel</h6>
+          <br>
+          <div class="flex animated" *ngIf="trainers.length > 0">
+            <div *ngFor="let trainer of filteredTrainers" class="trainer-card">
+              <div class="card card-danger-info">
+                <div class="card-header bg-theme">
+                <h4 class="m-b-0 text-white text-center">{{trainer.name}}</h4></div>
+                  <div class="card-body shadow text-center hvr-underline-from-left">
+                    <p class="card-text">
+                    <img (click)="openImageDialog(trainer)" [src]="trainer.image | image"
+                      class="profile-picture img-circle"
+                      data-toggle="tooltip" data-placement="top" title="Change"/>
+                    </p>
+
+                    <label *ngIf="trainer.role == 'ADMIN_ROLE'"
+                    class="label label-warning">Admin</label>
+                    <label *ngIf="trainer.role == 'TRAINER_ROLE'"
+                    class="label label-success">Trainer</label>
+
+                    <label *ngIf="trainer.google" class="label label-danger">Google</label>
+                    <label *ngIf="!trainer.google" class="label label-info">Normal</label>
+                    <p>
+                      <i (click)="editTrainer(trainer)" class="fa fa-edit" title="Edit"></i>
+                      <i (click)="deleteTrainer(trainer)" class="fa fa-trash-o" title="Delete"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+           </div>
+
+           <sun-moon-loading *ngIf="trainers.length == 0"></sun-moon-loading>
+
+           <div *ngIf="filteredTrainers.length == 0 && trainers.length > 0" class="text-center">
+              No <strong>Trainer</strong> match "<strong>{{searchValue}}</strong>". Please try again.
+           </div>
+
+          </div>
+        </div>
+     </div>
+    </div>
+</div>

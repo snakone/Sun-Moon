@@ -1,0 +1,120 @@
+.shadow {
+  -webkit-box-shadow: 0px 10px 49px -2px rgba(0,0,0,0.55);
+  -moz-box-shadow: 0px 10px 49px -2px rgba(0,0,0,0.55);
+  box-shadow: 0px 10px 49px -2px rgba(0,0,0,0.55);
+  padding: 1em;
+  border-radius: 4px;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.trainer-card {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.trainer-card:hover {
+  cursor: pointer;
+}
+
+.no-trainer {
+  margin-top: .9rem;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    margin: 15px auto;
+  }
+}
+
+.pokemon {
+  width: 40px;
+  height: auto;
+  margin: 0 2px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+@media (max-width:600px){
+  .pokemon {
+    width: 35px;
+    height: auto;
+  }
+
+  .no-trainer {
+    margin-top: 0;
+    font-size: .9em;
+  }
+
+  .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: .8em;
+  }
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  margin-right: 20px;
+}
+
+.profile-picture:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 4px 4px 4px grey;
+}
+
+.back-next {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+button {
+  margin: 0 10px;
+}
+
+/* Underline From Left */
+
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left:hover:before,
+.hvr-underline-from-left:focus:before,
+.hvr-underline-from-left:active:before {
+  right: 0;
+}

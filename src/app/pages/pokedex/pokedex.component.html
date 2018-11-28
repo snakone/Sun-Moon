@@ -1,0 +1,44 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            <input (keyup)="onKeyUp($event)"
+            [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Pokémon...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Pokémon registered
+            (<small><strong>{{count}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Displaying Pokémon...</h6>
+          <br>
+          <div class="flex animated fadeIn pokedex" *ngIf="pokedex">
+            <span *ngFor="let pokemon of filteredPokedex" >
+                <img [src]="urlImage + pokemon.picture + '.png'"
+                  [routerLink]="['/pokemon', pokemon.picture]" class="pokemon"
+                  [matTooltip]="pokemon.name"/>
+              </span>
+           </div>
+
+          <sun-moon-loading *ngIf="pokedex.length == 0"></sun-moon-loading>
+
+          <div *ngIf="pokedex && filteredPokedex">
+            <div *ngIf="filteredPokedex.length == 0 && pokedex.length > 0"
+              class="text-center">
+             No <strong>Pokémon</strong> match "<strong>{{searchValue}}</strong>".
+             Please try again.
+           </div>
+          </div>
+
+          </div>
+        </div>
+     </div>
+    </div>
+</div>

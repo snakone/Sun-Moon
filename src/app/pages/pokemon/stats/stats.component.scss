@@ -1,0 +1,65 @@
+h3 {
+  margin-top: 20px;
+}
+
+.stats {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.high {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.legend {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:600px){
+  .legend span {
+    font-size: .6em;
+  }
+}
+
+.bg-speed {
+  background-color: purple;
+}
+
+.bg-def {
+  background-color: orange;
+}
+
+.bg-sdef {
+  background-color: blue;
+}
+
+.bg-atk {
+  background-color: gold;
+}
+
+.progress {
+  margin: 10px auto;
+}
+
+.square {
+  vertical-align: top;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 0 auto 0 5px;
+  padding: 4px;
+  margin-bottom: 2px;
+}
+
+.last {
+  margin-right: 0;
+}

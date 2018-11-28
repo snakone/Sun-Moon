@@ -1,0 +1,53 @@
+.bg-speed {
+  background-color: purple;
+}
+
+.bg-def {
+  background-color: orange;
+}
+
+.bg-sdef {
+  background-color: blue;
+}
+
+.bg-atk {
+  background-color: gold;
+}
+
+.progress {
+  margin: 10px auto;
+}
+
+.stats {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.legend {
+  max-width: 450px;
+  margin: 20px auto;
+  margin-bottom: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  vertical-align: top;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 0 auto 0 5px;
+  padding: 4px;
+  margin-bottom: 2px;
+}
+
+@media (max-width:600px){
+  .legend span {
+    font-size: .6em;
+  }
+}

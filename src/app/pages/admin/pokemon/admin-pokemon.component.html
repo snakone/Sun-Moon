@@ -1,0 +1,57 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+
+            <input (keyup)="onKeyUp($event)" [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Pokémon...">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Pokémon registered (<small><strong>{{totalPokemons}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Pokémon Admin Panel</h6>
+          <div>
+            <button (click)="openPokemonDialog()" type="button"
+             class="btn waves-effect waves-light btn-rounded btn-success create">
+             NEW POKÉMON
+            </button>
+          </div>
+          <br>
+
+          <table *ngIf="filteredPokemons.length > 0" class="table table-striped">
+            <thead>
+              <th>Pokédex</th>
+              <th>Pokémon</th>
+              <th>Actions</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pokemon of filteredPokemons">
+                <td>{{pokemon.pokedex}}</td>
+                <td class="little">{{pokemon.name}}</td>
+                <td>
+                  <i (click)="editPokemon(pokemon)" class="fa fa-edit" title="Edit"></i>
+                  <i (click)="deletePokemon(pokemon)" class="fa fa-trash-o" title="Delete"></i>
+                </td>
+              </tr>
+            </table>
+
+
+            <sun-moon-loading *ngIf="pokemons.length == 0"></sun-moon-loading>
+
+             <div *ngIf="filteredPokemons.length == 0 && pokemons.length > 0" class="text-center">
+                No <strong>Pokémon</strong> match "<strong>{{searchValue}}</strong>". Please try again.
+             </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

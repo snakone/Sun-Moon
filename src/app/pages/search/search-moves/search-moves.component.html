@@ -1,0 +1,15 @@
+<div class="row moves">
+  <div class="col-12">
+      <div class="card-body">
+        <div class="flex animated fadeIn slower" *ngIf="moves.length > 0">
+          <span class="type {{move.type}}" *ngFor="let move of moves"
+          [ngClass]="{'text-color': move.type == 'Ice' || move.type == 'Electric'}"
+          [routerLink]="['/move/', move.name | move]">
+          {{move.name}}</span>
+        </div>
+
+        <div *ngIf="moves.length == 0" class="text-center">
+          No <strong>Move</strong> match. Please try again.
+        </div>
+  </div>
+</div>

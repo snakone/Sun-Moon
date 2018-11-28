@@ -1,0 +1,141 @@
+@import '../../scss/types-box';
+
+@media (min-width: 700px) {
+  .vertical {
+    display: none;
+  }
+  .horizontal {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .vertical {
+    display: block;
+  }
+
+  .horizontal {
+    display: none;
+  }
+
+  .m-top {
+    margin-top: 10px;
+  }
+}
+
+.reset {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.reset:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.small {
+  font-size: .8em;
+}
+
+.type-grid {
+  max-width: 550px;
+  margin: 10px auto;
+  padding-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.stat-grid {
+  max-width: 650px;
+  margin: 20px auto;
+  padding-top: 25px;
+  margin-bottom: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.evolution-grid {
+  max-width: 550px;
+  margin: 20px auto;
+  padding-top: 25px;
+  margin-bottom: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.register {
+  margin: 0 auto;
+  margin-top: -30px;
+}
+
+.example-radio-button {
+  margin: 5px 15px;
+}
+
+::ng-deep .mat-step-icon .mat-icon {
+  padding-top: 1px!important;
+  padding-right: 9px!important;
+}
+
+::ng-deep .mat-horizontal-stepper-header {
+  height: 50px!important;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+  margin: 0!important;
+}
+
+::ng-deep .mat-step-header {
+  border-radius: 10px;
+}
+
+::ng-deep .mat-step-header:hover {
+  background-color: rgba(100, 100, 100, .5);
+}
+
+::ng-deep .mat-stepper-horizontal {
+ padding: 20px 0;
+ background-color: transparent;
+ overflow: hidden;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container {
+  max-width: 800px!important;
+  margin: 0 auto;
+}
+
+::ng-deep .mat-stepper-vertical {
+ padding: 40px 0 0 0;
+ background-color: transparent;
+ overflow: hidden;
+ margin-left: -15px;
+}
+
+::ng-deep .mat-vertical-content {
+ padding: 0 24px 0 24px!important;
+}
+
+::ng-deep .mat-vertical-stepper-header {
+  padding: 10px!important;
+  padding-left: 17px!important;
+  margin: 5px auto!important;
+}
+
+::ng-deep .mat-input-element {
+  margin: 0!important;
+}
+
+::ng-deep .mat-vertical-content-container {
+  margin-left: 55px!important;
+}
+
+::ng-deep .mat-horizontal-content-container, .mat-vertical-content-container {
+  min-height: 90px!important;
+  padding: 0!important;
+}
+
+::ng-deep .mat-step-label {
+  margin-left: 25px!important;
+}

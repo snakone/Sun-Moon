@@ -1,0 +1,25 @@
+.poke-items {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.item {
+  width: 56px;
+  height: auto;
+  margin: 4px 2px;
+}
+
+.pokeitems:hover {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text-center {
+  font-size: .8em;
+}
