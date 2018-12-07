@@ -2,8 +2,10 @@
   <div class="row">
     <div class="col-12">
         <p class="info">{{pokemon.info}}</p>
-        <span class="type {{pokemon.type}} bottom">{{pokemon.type}}</span>
+        <span class="type {{pokemon.type}} bottom"
+        [routerLink]="['/types', pokemon.type]">{{pokemon.type}}</span>
         <span *ngIf="pokemon.type2 != 'None'"
+        [routerLink]="['/types', pokemon.type2]"
         class="type {{pokemon.type2}}">{{pokemon.type2}}</span>
         <br>
         <h4>Family</h4>

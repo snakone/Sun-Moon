@@ -1,0 +1,39 @@
+<h4 class="card-title">Type Chart</h4>
+<h6 class="card-subtitle">Attack & Defenses</h6>
+  <div class="m-t-20" [innerHTML]="type.chart"></div>
+
+  <div class="chart">
+    <h6 class="card-subtitle"><strong>Attacking</strong></h6>
+     <div class="row">
+       <div class="col-6">
+         <span class="type block good">GOOD</span>
+         <span class="type {{strong}}"
+         *ngFor="let strong of chart.strong"
+         [routerLink]="['/types', strong]">{{strong}}</span>
+       </div>
+       <div class="col-6">
+         <span class="type block bad">BAD</span>
+         <span class="type {{weak}}"
+         *ngFor="let weak of chart.weak"
+         [routerLink]="['/types', weak]">{{weak}}</span>
+       </div>
+     </div>
+  </div>
+
+  <div class="chart">
+    <h6 class="card-subtitle"><strong>Defending</strong></h6>
+     <div class="row">
+       <div class="col-6">
+         <span class="type block good">GOOD</span>
+         <span class="type {{half}}"
+         *ngFor="let half of chart.half"
+         [routerLink]="['/types', half]">{{half}}</span>
+       </div>
+       <div class="col-6">
+         <span class="type block bad">BAD</span>
+         <span class="type {{effective}}"
+         *ngFor="let effective of chart.effective"
+         [routerLink]="['/types', effective]">{{effective}}</span>
+       </div>
+     </div>
+  </div>

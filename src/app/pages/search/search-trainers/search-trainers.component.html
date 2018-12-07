@@ -10,7 +10,8 @@
                   <p class="card-text">
                   <img (click)="openImageDialog(trainer)" [src]="trainer.image | image"
                     class="profile-picture img-circle"
-                    data-toggle="tooltip" data-placement="top" title="Cambiar"/>
+                    data-toggle="tooltip" data-placement="top" title="Cambiar"
+                    [routerLink]="['/trainer', trainer.name]"/>
                   </p>
                 </div>
               </div>

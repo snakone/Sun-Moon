@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+      <h4 class="card-title">Pokémon Types</h4>
+      <h6 class="card-subtitle">The Pokémon Encylopedia</h6>
+       <div class="types animated fadeIn slower">
+          <div class="type-grid">
+            <span [routerLink]="['/types', type]"
+            *ngFor="let type of types" class="type {{type}}">{{type}}</span>
+          </div>
+          <div class="description">
+            <p>
+              All Pokémon creatures and their moves are assigned certain types.
+              Each type has several <strong>Strengths</strong> and
+              <strong>Weaknesses</strong> in both attack and defense.
+              In battle, you should use Pokémon and moves that have a type
+              <strong>Advantage</strong> over your opponent;
+              doing so will cause much more damage than normal.
+            </p>
+            <p>
+              A single-type advantage will net you double normal damage.
+              The advantages also stack up, so a double-type advantage
+              (for instance a <strong style="color:blue">Water</strong>
+              attack against a <strong style="color:#E0C068">Ground</strong>
+              /<strong style="color:#B8A038">Rock</strong> type Pokémon)
+              will net you quadruple damage. In both these cases you will
+              see the message It's super effective! in-game after the attack.
+            </p>
+            <p>
+              Another advantage you can gain is Same Type Attack Bonus
+              (<strong>STAB</strong>). As the name implies, this increases
+              the power of the move if the attacking Pokémon has the same type
+              as the move used (for example a <strong style="color:red">Fire</strong>
+              type using a <strong style="color:red">Fire</strong> type move).
+            </p>
+            <p>
+              In this case the damage is 1.5 times normal. Again this is
+              added to any other advantages, so a <strong style="color:blue">Water</strong>
+              type using a <strong style="color:blue">Water</strong>
+              type move against a <strong style="color:#E0C068">Ground</strong>
+              /<strong style="color:#B8A038">Rock</strong>
+              type Pokémon will bag you six times (<strong>2×2×1.5</strong>) normal damage!
+            </p>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>

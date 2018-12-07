@@ -1,0 +1,8 @@
+<h4 class="card-title">Best Pokémon</h4>
+<h6 class="card-subtitle">Displayed by Total SS</h6>
+  <div>
+    <ul class="pokeball-list">
+      <li class="hover-theme" *ngFor="let pokemon of best"
+      [routerLink]="['/pokemon', pokemon.picture]">{{pokemon.name}}</li>
+    </ul>
+  </div>

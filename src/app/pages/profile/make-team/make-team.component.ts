@@ -15,7 +15,9 @@ import Swal from 'sweetalert2'
 export class MakeTeamComponent implements OnInit {
 
   pokedex: Pokemon[] = [];
+  filteredPokedex: Pokemon[] = [];
   team: Pokemon[] = [];
+  searchValue: string;
   @Input() trainer: Trainer;
   @Output() emitChange: EventEmitter<Trainer> = new EventEmitter();
   urlImage: string = "../../../../assets/images/pokemon/";
@@ -32,11 +34,19 @@ export class MakeTeamComponent implements OnInit {
       this._pokemon.getPokemonList()
        .subscribe((res:any) => {
          this.pokedex = res.pokemons;
+         this.filteredPokedex = this.pokedex;
          this._pokemon.pokemonList = this.pokedex;
        })
      } else { // Get from Service
         this.pokedex = this._pokemon.pokemonList;
       }
+  }
+
+  search(e){
+    let filter = new RegExp (e.value, 'i');
+    this.filteredPokedex = this.pokedex.filter(pokemon => {
+      return pokemon.name.match(filter);
+    })
   }
 
   addTeam(){

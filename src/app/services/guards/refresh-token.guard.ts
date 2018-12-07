@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot,
          RouterStateSnapshot,
-         CanActivateChild} from '@angular/router';
+         CanActivateChild } from '@angular/router';
 
 import { TrainerService } from '../services.index';
 
@@ -23,9 +23,8 @@ export class RefreshTokenGuard implements CanActivateChild {
       // Payload.exp = seconds till Token expires
       let expired = this.tokenExpired(payload.exp);  // Token expired?
 
-      if (expired) { // If Expired remove Token to get a New One
-        localStorage.removeItem('token');
-        sessionStorage.clear();
+      if (expired) { // If Expired remove Log Out
+        this._trainer.trainerLogOut();
         return false;
       }
       return this.needRefresh(payload.exp);

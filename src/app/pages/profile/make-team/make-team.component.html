@@ -11,10 +11,15 @@
           (click)="reset()">replay</mat-icon>
           <div class="row">
             <div class="col-12 pokedex-container">
+
+              <input type="text" class="form-control m-b-20" #value="ngModel"
+              [ngModel]="searchValue" (ngModelChange)="search(value)"
+              name="searchValue" placeHolder="Search Pokémon..."/>
+
               <div cdkDropList #pokedexList="cdkDropList"
-                [cdkDropListData]="pokedex" [cdkDropListConnectedTo]="[teamList]"
+                [cdkDropListData]="filteredPokedex" [cdkDropListConnectedTo]="[teamList]"
                 class="pokedex-list" (cdkDropListDropped)="drop($event)">
-                <img *ngFor="let pokemon of pokedex" cdkDrag class="pkm-pokedex"
+                <img *ngFor="let pokemon of filteredPokedex" cdkDrag class="pkm-pokedex"
                 [src]="urlImage + pokemon.picture + '.png'"
                 [routerLink]="['/pokemon', pokemon.picture]"
                 [matTooltip]="pokemon.name"/>

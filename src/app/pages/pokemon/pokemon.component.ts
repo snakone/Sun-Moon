@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, Params } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { PokemonService } from 'src/app/services/services.index';
 import { Pokemon } from 'src/app/models/pokemon.model';
-import { switchMap, map} from 'rxjs/operators';
+import { switchMap, map } from 'rxjs/operators';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'sun-moon-pokemon',
@@ -19,7 +20,7 @@ export class PokemonComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
               private _pokemon: PokemonService,
-              private router: Router) { }
+              private _location: Location) { }
 
   ngOnInit() {
     this.activatedRoute.params  // Subscribe to URL Changes
@@ -34,7 +35,7 @@ export class PokemonComponent implements OnInit {
   }
 
   goBack(){
-    this.router.navigate(['/pokedex']);
+    this._location.back();
   }
 
 }

@@ -12,7 +12,12 @@ img {
   margin: 10px auto;
   border-radius: 3px;
   border: 1px solid black;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+img:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
 }
 
 h2 {
@@ -21,7 +26,7 @@ h2 {
 }
 
 h5 {
-  margin-top: 35px;
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 
@@ -61,15 +66,15 @@ ol {
   padding-top: 10px;
 }
 
-.list {
+.list-item {
   position: absolute;
   left: -25px;
   top: 7px;
 }
 
 .coverage {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .pokemon {
@@ -90,4 +95,40 @@ ol {
   margin: 10px 5px;
   width: 40px;
   height: auto;
+}
+
+.bracelet-list li {
+		padding: 1.3em 5px 0.7em 30px;
+    margin-left: -35px;
+		font-size: 1.2em;
+		background: url("../../../../assets/images/icon/bracelet.png") 0px 1.05em no-repeat;
+    border-bottom: solid 1px #e2e6e8;
+    width: 100%;
+    font-size: .9em;
+}
+
+.check-list li {
+		padding: 1.1em 5px 0.7em 30px;
+    margin-left: -35px;
+		font-size: 1.2em;
+		background: url("../../../../assets/images/icon/check-li.png") 0px 1.05em no-repeat;
+    border-bottom: solid 1px #e2e6e8;
+    width: 100%;
+    font-size: .9em;
+}
+
+ul {
+		list-style: none;
+}
+
+.list {
+  margin: 20px auto;
+  margin-top: 15px;
+}
+
+hr.invisible-separator {
+  height: 0;
+  width: 90%;
+  margin: 10px auto;
+  border-top: 1px solid transparent;
 }

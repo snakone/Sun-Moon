@@ -1,0 +1,29 @@
+@import '../../../../scss/types-text';
+
+.flex {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.pokeitem {
+  width: 55px;
+  height: 55px;
+  margin: 2px;
+}
+
+@media (max-width:600px){
+  .pokeitem {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.pokeitem:hover {
+  cursor:pointer;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}

@@ -1,21 +1,36 @@
 @import '../../../scss/types-box';
 
-.flex {
-  max-width: 500px;
-  margin: 20px auto;
-  display: flex;
-  align-content: space-around;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px 15px 10px;
+.charts {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .m-t-35 {
   margin-top: 35px;
 }
 
-.last {
-  padding-bottom: 10px;
-  margin-bottom: 0;
+.chart {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.block {
+  display: block;
+  margin: 5px 2px;
+  pointer-events: none;
+}
+
+.bad {
+  max-width: 200px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1.5px solid red;
+}
+
+.good {
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border-bottom: 1.5px solid lime;
 }

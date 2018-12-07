@@ -17,7 +17,7 @@
           <h4 class="card-title">Trainers registered (<small><strong>{{totalTrainers}}</strong></small>)</h4>
           <h6 class="card-subtitle">Trainer Admin Panel</h6>
           <br>
-          <div class="flex animated" *ngIf="trainers.length > 0">
+          <div class="flex animated fadeIn slower" *ngIf="trainers.length > 0">
             <div *ngFor="let trainer of filteredTrainers" class="trainer-card">
               <div class="card card-danger-info">
                 <div class="card-header bg-theme">

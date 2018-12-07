@@ -6,6 +6,7 @@ import { AdminTrainersComponent } from '../admin/trainers/admin-trainers.compone
 import { AdminPokemonComponent } from '../admin/pokemon/admin-pokemon.component';
 import { AdminMoveComponent } from '../admin/move/admin-move.component';
 import { AdminPokeItemComponent } from '../admin/poke-item/admin-poke-item.component';
+import { AdminAbilityComponent } from './ability/admin-ability.component';
 
 
 const AdminRoutes: Routes = [
@@ -25,6 +26,11 @@ const AdminRoutes: Routes = [
         path: 'moves',
         component: AdminMoveComponent,
         data: { page: "Move", content:"Admin"}
+      },
+      {
+        path: 'abilities',
+        component: AdminAbilityComponent,
+        data: { page: "Abilities", content:"Admin"}
       },
       {
         path: 'poke-items',

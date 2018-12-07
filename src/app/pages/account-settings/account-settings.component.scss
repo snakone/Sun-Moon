@@ -1,10 +1,14 @@
 button {
   margin-top: 25px;
-  margin-bottom: 27px;
+  margin-bottom: 15px;
 }
 
 h4 {
   margin-top: 20px;
+}
+
+.card {
+  min-height: 400px;
 }
 
 @media (max-width:1431px) and (min-width:992px) {
@@ -13,9 +17,9 @@ h4 {
   }
 }
 
-@media (max-width:1431px) and (min-width:1216px) {
+@media (max-width:1431px) and (min-width:1230px) {
   button {
-    margin-top: 21px;
+    margin-top: 20px;
   }
 }
 

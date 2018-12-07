@@ -4,78 +4,82 @@
       <h4 class="card-title">Victory Road</h4>
       <h6 class="card-subtitle">Take a Expedition with plenty of challenges!</h6>
     <ol class="index">
-       <li><span class="list">1.</span>
+       <li><span class="list-item">1.</span>
          <h4 class="index">
            <a (click)="scrollToElement(Rules)">Rules</a>
          </h4>
        </li>
-       <li><span class="list">2.</span>
+       <li><span class="list-item">2.</span>
          <h4 class="index">
            <a (click)="scrollToElement(Requeriments)">Requeriments</a>
          </h4>
        </li>
-       <li><span class="list">3.</span>
+       <li><span class="list-item">3.</span>
          <h4 class="index">
            <a (click)="scrollToElement(Starting)">Starting</a>
          </h4>
        </li>
-       <li><span class="list">4.</span>
+       <li><span class="list-item">4.</span>
          <h4 class="index">
            <a (click)="scrollToElement(Strategy)">Strategy</a>
          </h4>
        </li>
-       <li><span class="list">5.</span>
+       <li><span class="list-item">5.</span>
          <h4 class="index">
            <a (click)="scrollToElement(Stats)">Stat Changes</a>
          </h4>
        </li>
-       <li><span class="list">6.</span>
+       <li><span class="list-item">6.</span>
          <h4 class="index">
            <a (click)="scrollToElement(Smuggler)">Poke Smuggler</a>
          </h4>
        </li>
-       <li><span class="list">7.</span>
+       <li><span class="list-item">7.</span>
          <h4 class="index">
            <a (click)="scrollToElement(Rewards)">Rewards</a>
          </h4>
        </li>
    </ol>
-      <hr class="separator">
-      <h2 #Rules>Rules</h2>  <!-- RULES -->
-        <p>
+      <hr class="separator" #Rules>
+      <h2 class="text-themecolor">Rules</h2>  <!-- RULES -->
+
+      <ul class="bracelet-list list">
+        <li>
           Pokémon will not recover <strong>HP</strong> and
           <strong>PP</strong> during or after battle.
-        </p>
-        <p>
+        </li>
+        <li>
           Cannot use Pokémon <strong>Heal or
           bag items</strong> in Victory Road.
-        </p>
-        <p>
+        </li>
+        <li>
           Newly caught Pokémon can be <strong>assigned</strong> to
           Victory Road Formation. (Before reset)
-        </p>
-        <p>
+        </li>
+        <li>
           Pokémon in formation will not be affected by
           <strong>exterior upgrades</strong> and boosts.
-        </p>
-        <p>
+        </li>
+        <li>
           Opponents of each stage will be chosen based
           on the <strong>power of Pokémon</strong> the player has.
-        </p>
-        <p>
+        </li>
+        <li>
           Each time player clear the Victory Road, they
           have a chance to encounter <strong>PokeSmuggler</strong>.
-        </p>
-        <p>
+        </li>
+        <li>
           VIP13 players or above will get <strong>double rewards</strong>
           from the boxes they pick up.
-        </p>
-        <p>
+        </li>
+        <li>
           VIP5 players or above can use <span class="kill">Quick Kill</span>.
           This will complete Victory Road till <strong>stage 10</strong>.
-        </p>
-      <hr class="separator">
-      <h2 #Requeriments>Requeriments</h2>  <!-- REQUERIMENTS -->
+        </li>
+      </ul>
+
+      <hr class="invisible-separator" #Requeriments>
+      <h2 class="text-themecolor">Requeriments</h2>  <!-- REQUERIMENTS -->
         <p>
           There is no level restriction, but We recommend
           minimum <strong>Level 50</strong>.
@@ -89,30 +93,33 @@
           it will take around <strong>2 hours</strong>.
         </p>
           You must have every attack type covered. Example:
-        <div class="coverage">
-          <p>
+
+        <ul class="check-list list p-b-10">
+          <li>
             <span class="Grass">Energy Ball</span> to kill
             <strong>Swampert</strong> or
             <strong>Kyogre</strong>
-          </p>
-          <p>
+          </li>
+          <li>
             <span class="Ice">Ice Beam</span> to kill
             <strong>Garchomp</strong> or <strong>Giratina</strong>
-          </p>
-          <p>
+          </li>
+          <li>
             <span class="Fighting">Aura Sphere</span> to kill
             <strong>Tyranitar</strong> or <strong>Darkrai</strong>
-          </p>
-          <p>
+          </li>
+          <li>
             <span class="Fire">Flamethrower</span> to kill
             <strong>Scizor</strong> or <strong>Snorlax Y</strong>
-          </p>
-        </div>
+          </li>
+        </ul>
+
         <p>You need Pokémon with <strong>Recover, Roost, Slack Off</strong>,
           etc... This will help You a lot to clear your Expedition.
         </p>
-      <hr class="separator">
-      <h2 #Starting>Starting</h2>  <!-- STARTING -->
+
+      <hr class="separator" #Starting >
+      <h2 class="text-themecolor">Starting</h2>  <!-- STARTING -->
       <h4>Let's start the expedition to Victory Road!</h4>
       <h5 class="bold">What is Victory Road?</h5>  <!-- WHAT IS VICTORY ROAD? -->
 
@@ -145,43 +152,44 @@
 
       <h5 class="bold">Recommened Tips</h5>  <!-- RECOMMENED TIPS -->
 
-      <p>
-        <span class="Grass">&#x2713;</span> The <strong>Berry</strong>
-        will be reset after each battle.
-      </p>
-      <p>
-        <span class="Grass">&#x2713;</span> Escape won't fail unless You
-        are trapped.
-      </p>
-      <p>
-        <span class="Grass">&#x2713;</span> The rule of unable to recover
-        <strong>HP</strong> or <strong>PP</strong> after battle
-        not only work for you, but also your rival.
-     </p>
-      <p>
-        <span class="Grass">&#x2713;</span> The buff or debuff will
-        be reset after battle.
-      </p>
+      <ul class="bracelet-list list">
+        <li>
+          The <strong>Berry</strong> will be reset after each battle.
+        </li>
+        <li>
+          Escape won't fail unless You are trapped.
+        </li>
+        <li>
+          The rule of unable to recover <strong>HP</strong> or <strong>PP</strong>
+          after battle not only work for you, but also your rival.
+       </li>
+        <li>
+          The buff or debuff will be reset after battle.
+        </li>
+      </ul>
 
       <h5 class="bold">Recommened Pokémon</h5>  <!-- RECOMMENED POKEMON -->
-          <p>
+
+        <ul class="check-list list">
+          <li>
             Tank liked Pokémon that can Recover
             <strong>HP</strong>.
-          </p>
-          <p>
+          </li>
+          <li>
             Pokémon with high <strong>SPD</strong>
             and <strong>S.ATK</strong> or <strong>ATK</strong>.
-          </p>
-          <p>
+          </li>
+          <li>
             Pokémon with debuff move like
             <span class="Grass">Sleep Powder</span> and
             <strong>leech HP</strong>.
-          </p>
-          <p>
+          </li>
+          <li>
             Pokémon with <strong>SPD</strong>
             and <span class="Ghost">Destiny Bond</span>.
             Make a <strong>Suicide</strong> team!
-          </p>
+          </li>
+        </ul>
 
       <h5><strong>Let's start!</strong></h5>   <!-- LET'S START -->
 
@@ -239,13 +247,13 @@
           to secure kills on Pokémon with <strong>low HP</strong>. Good examples are...
         </p>
 
-          <div class="coverage">
-            <p>&#x25ba; <span class="Normal">Quick Attack</span></p>
-            <p>&#x25ba; <span class="Normal">Extreme Speed</span></p>
-            <p>&#x25ba; <span class="Steel">Bullet Punch</span></p>
-          </div>
+          <ul class="bracelet-list list">
+            <li><span class="Normal">Quick Attack</span></li>
+            <li><span class="Normal">Extreme Speed</span></li>
+            <li><span class="Steel">Bullet Punch</span></li>
+          </ul>
 
-        <p>
+        <p class="m-t-30">
           Every stage is harder than the last. It should
           be easy till <strong>stage 10</strong>.
         </p>
@@ -264,14 +272,14 @@
           This will help You to defeat more opponents. Examples:
         </p>
 
-        <div class="coverage">
-          <p>&#x25ba; <span class="Grass">Bullet Seed</span></p>
-          <p>&#x25ba; <span class="Fighting">Aura Sphere</span></p>
-          <p>&#x25ba; <span class="Flying">Aerial Ace</span></p>
-          <p>&#x25ba; <span class="Steel">Steel Wing</span></p>
-        </div>
+        <ul class="bracelet-list list">
+          <li><span class="Grass">Bullet Seed</span></li>
+          <li><span class="Fighting">Aura Sphere</span></li>
+          <li><span class="Flying">Aerial Ace</span></li>
+          <li><span class="Steel">Steel Wing</span></li>
+        </ul>
 
-        <p>
+        <p class="m-t-30">
           Use <strong>Escape</strong> to check your rival’s
           Pokémon. Make sure your first <strong>Pokémon</strong> can hit his weakness.
         </p>
@@ -294,9 +302,9 @@
 
       <img style="margin: 0 auto; display: block" src="{{ urlImage }}reset.png" >
 
-      <hr class="separator">
+      <hr class="separator" #Strategy>
 
-      <h2 #Strategy>Strategy</h2>   <!-- STRATEGY -->
+      <h2 class="text-themecolor">Strategy</h2>   <!-- STRATEGY -->
 
       <h4>Clear Victory Road everytime!</h4>
 
@@ -370,7 +378,9 @@
         Which move is strong
         against a <span class="Dragon">Dragon</span>?
       </p>
-      <p>The answer is <span class="Ice">Ice</span></p>
+      <p class="must">
+        The answer is <span class="Ice">Ice</span>
+      </p>
 
       <p>
         &#x25ba; Change your <strong>Formation</strong> and put an
@@ -514,18 +524,20 @@
 
       <p>Easy! Let's continue the Expedition!</p>
 
-      <hr class="separator">
+      <hr class="separator" #Stats>
 
-      <h2 #Stats>Stat Changes</h2>  <!-- STATS CHANGES -->
+      <h2 class="text-themecolor">Stat Changes</h2>  <!-- STATS CHANGES -->
       <h4>Don't worry about Stat Changes!</h4>
 
       <p class="m-t-20">&#x25ba; We count <strong>Stat Changes</strong> as...</p>
 
+        <div class="coverage">
           <p class="Fire">Burned</p>
           <p class="Electric">Paralyzed</p>
           <p class="Flying">Sleeped</p>
           <p class="Poison">Poisoned</p>
           <p class="Ice">Frozen</p>
+        </div>
 
       <p>
         Moves that changes <strong>Pokémon stats</strong> like
@@ -602,9 +614,9 @@
         <strong>increased</strong> stats.
     </p>
 
-      <hr class="separator">
+      <hr class="separator" #Smuggler>
 
-      <h2 #Smuggler>Poke Smuggler</h2>   <!-- POKE SMUGGLER -->
+      <h2 class="text-themecolor">Poke Smuggler</h2>   <!-- POKE SMUGGLER -->
       <h4>The Black Market is here!</h4>
 
       <p class="m-t-20">
@@ -630,16 +642,16 @@
         </div>
       </div>
 
-      <hr class="separator">
+      <hr class="separator" #Rewards>
 
-      <h2 #Rewards>Rewards</h2>   <!-- REWARDS -->
+      <h2 class="text-themecolor">Rewards</h2>   <!-- REWARDS -->
       <h4>Fill your pockets with many items!</h4>
 
       <p class="m-t-20">There is a chest after every stage, total <strong>15 chest</strong>.</p>
 
       <p>The chest rewards depend on the stage:</p>
 
-      <div class="row">
+      <div class="row text-center">
         <div class="col-6 m-t-20">
           <h4 class="bold">Stage 1 - 10</h4>
           <img class="item" src="{{urlImage}}stone.png"/>

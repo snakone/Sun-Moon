@@ -1,0 +1,62 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            <input (keyup)="onKeyUp($event)"
+            [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Ability...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Abilities registered
+            (<small><strong>{{count}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Displaying Abilities...</h6>
+          <br>
+
+          <div class="flex" *ngIf="abilities.length > 0">
+            <div *ngFor="let ability of filteredAbilities"
+                  class="ability-card animated fadeIn slower">  <!-- ngFor -->
+              <div class="card card-danger-info"
+                   [routerLink]="['/ability/', ability.ability]">
+                <div class="card-header bg-theme">
+                <h4 class="m-b-0 text-white text-center">{{ability.name}}</h4></div>
+                  <div class="card-body shadow text-center hvr-underline-from-left">
+                    <p class="card-text">
+                    <img [src]="urlImage + ability.picture + '.png'"
+                      class="ability-picture"/>
+                    </p>
+
+                    <label *ngIf="ability.type == 'ATK'"
+                    class="label label-danger">Attack</label>
+                    <label *ngIf="ability.type == 'DEF'"
+                    class="label label-info">Defense</label>
+                    <label *ngIf="ability.type == 'SPD'"
+                    class="label label-warning">Speed</label>
+
+                  </div>
+                </div>
+              </div>
+           </div>
+
+          <sun-moon-loading *ngIf="abilities.length == 0"></sun-moon-loading>
+
+          <div *ngIf="abilities && filteredAbilities">
+            <div *ngIf="filteredAbilities.length == 0 && abilities.length > 0"
+              class="text-center">
+             No <strong>Ability</strong> match "<strong>{{searchValue}}</strong>".
+             Please try again.
+           </div>
+          </div>
+
+          </div>
+        </div>
+     </div>
+    </div>
+</div>

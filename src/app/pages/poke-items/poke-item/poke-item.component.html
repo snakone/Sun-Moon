@@ -4,7 +4,7 @@
       <div class="card-body" *ngIf="pokeitem">
         <h4 class="card-title">{{pokeitem.item}}</h4>
         <h6 class="card-subtitle">Held Item</h6>
-        <div class="pokeitem">
+        <section class="pokeitem">
           <div class="row">
             <mat-icon class="reset" matTooltip="Go back"
             (click)="goBack()">reply</mat-icon>
@@ -15,7 +15,7 @@
             </div>
           </div>
           <p class="info">{{pokeitem.info}}</p>
-        </div>
+        </section>
       </div>
     </div>
   </div>

@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Trainer } from 'src/app/models/trainer.model';
 import { Pokemon } from 'src/app/models/pokemon.model';
-import { TypesService } from 'src/app/services/services.index';
-import { PokemonType } from 'src/app/models/pokemon-type.model';
+import { TypeStatsService } from 'src/app/services/services.index';
+import { TypeStats } from 'src/app/models/type-stats.model';
 
 @Component({
   selector: 'sun-moon-team-types',
@@ -15,11 +15,11 @@ export class TeamTypesComponent implements OnInit, OnChanges {
   @Input() trainer: Trainer;
   teamTypes1: any[] = [];
   teamTypes2: any[] = [];
-  types1: PokemonType;  // Array (strong, weak, half, effective)
-  types2: PokemonType;
-  teamTypes: PokemonType;  // types1 + types2
+  types1: TypeStats;  // Array (strong, weak, half, effective)
+  types2: TypeStats;
+  teamTypes: TypeStats;  // types1 + types2
 
-  constructor(private _types:TypesService) { }
+  constructor(private _types:TypeStatsService) { }
 
   ngOnChanges(changes: SimpleChanges){  // Subcribe to Trainer Team Changes
     // Cleaner

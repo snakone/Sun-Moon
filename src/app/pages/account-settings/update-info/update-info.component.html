@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-body">
     <h4 class="card-title">Trainer Info</h4>
-    <h6 class="card-subtitle">Here You can change your Trainer Info</h6>
+    <h6 class="card-subtitle">Here You can change your Info</h6>
       <form [formGroup]="updateForm" (ngSubmit)="onSubmitProfile()" class="floating-labels p-t-20">
 
           <div class="form-group">  <!-- NAME -->
@@ -16,19 +16,6 @@
                 class="form-control form-control-danger">  </div>
             </div>
           </div>
-
-          <!-- <div class="form-group">  LASTNAME
-            <div class="form-group has-feedback m-b-20"
-              [ngClass]="updateForm.controls.lastName.invalid == true ?
-               'has-danger' : 'has-success'">
-                <div class="input-group">
-              <div class="input-group-addon"><i class="ti-id-badge"></i></div>
-                <input type="text" formControlName="lastName" name="lastName"
-              [ngClass]="updateForm.controls.lastName.invalid == true ?
-               'form-control-danger' : 'form-control-success'"
-                class="form-control form-control-danger">  </div>
-            </div>
-          </div> -->
 
           <div class="form-group">  <!-- EMAIL-->
             <div class="form-group has-feedback m-b-20"

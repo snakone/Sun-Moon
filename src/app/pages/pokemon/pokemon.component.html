@@ -5,27 +5,27 @@
         <h4 class="card-title">{{pokemon.name}}</h4>
         <h6 class="card-subtitle">{{pokemon.description}}</h6>
         <div class="pokemon-info">
-        <mat-icon class="reset" matTooltip="Reload" (click)="goBack()">reply</mat-icon>
+        <mat-icon class="reset" matTooltip="Go back" (click)="goBack()">reply</mat-icon>
         <mat-icon class="next" matTooltip="Next" *ngIf="next != 'null'"
         [routerLink]="['/pokemon/', next]">last_page</mat-icon>
         <mat-icon class="previous" matTooltip="Previous" *ngIf="previous != 'null'"
         [routerLink]="['/pokemon/', previous]">first_page</mat-icon>
 
-              <mat-tab-group mat-align-tabs="center">
+          <mat-tab-group mat-align-tabs="center">
 
-                <mat-tab label="Bio">
-                  <sun-moon-bio [pokemon]="pokemon" [familiars]="familiars"></sun-moon-bio>
-                </mat-tab>
+            <mat-tab label="Bio">
+              <sun-moon-bio [pokemon]="pokemon" [familiars]="familiars"></sun-moon-bio>
+            </mat-tab>
 
-                <mat-tab label="Stats">
-                  <sun-moon-stats [pokemon]="pokemon"></sun-moon-stats>
-                </mat-tab>
+            <mat-tab label="Stats">
+              <sun-moon-stats [pokemon]="pokemon"></sun-moon-stats>
+            </mat-tab>
 
-                <mat-tab label="Info">
-                  <sun-moon-info [pokemon]="pokemon"></sun-moon-info>
-                </mat-tab>
+            <mat-tab label="Info">
+              <sun-moon-info [pokemon]="pokemon"></sun-moon-info>
+            </mat-tab>
 
-              </mat-tab-group>
+          </mat-tab-group>
 
         </div>
       </div>

@@ -14,6 +14,8 @@ import { PipesModule } from '../../pipes/pipes.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CreatePokeItemComponent } from './create-poke-item/create-poke-item.component';
 import { EditPokeItemComponent } from './edit-poke-item/edit-poke-item.component';
+import { CreateAbilityComponent } from './create-ability/create-ability.component';
+import { EditAbilityComponent } from './edit-ability/edit-ability.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { EditPokeItemComponent } from './edit-poke-item/edit-poke-item.component
     CreateMoveComponent,
     EditMoveComponent,
     CreatePokeItemComponent,
-    EditPokeItemComponent
+    EditPokeItemComponent,
+    CreateAbilityComponent,
+    EditAbilityComponent
   ],
   exports: [
     ReactiveFormsModule,
@@ -46,7 +50,9 @@ import { EditPokeItemComponent } from './edit-poke-item/edit-poke-item.component
     CreateMoveComponent,
     EditMoveComponent,
     CreatePokeItemComponent,
-    EditPokeItemComponent
+    EditPokeItemComponent,
+    CreateAbilityComponent,
+    EditAbilityComponent
   ]
 })
 export class ModalsModule { }

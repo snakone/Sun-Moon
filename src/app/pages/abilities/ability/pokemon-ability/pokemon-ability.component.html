@@ -1,0 +1,14 @@
+<h4 class="card-title">Pokemon with {{ability.name}}</h4>
+<h6 class="card-subtitle">Displaying Pokémon...</h6>
+
+<div class="flex animated fadeIn pokemon-ability" *ngIf="pokemons">
+  <span *ngFor="let pokemon of pokemons">
+      <img [src]="urlImage + pokemon.pokemon + '.png'"
+        [routerLink]="['/pokemon', pokemon.pokemon]"
+        [matTooltip]="pokemon.pokemon | pokemon" class="pokemon"/>
+  </span>
+
+  <div class="text-center" *ngIf="pokemons.length == 0">
+    <p>No Pokémon with <strong>{{ability.name}}</strong> yet!</p>
+  </div>
+ </div>

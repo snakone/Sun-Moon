@@ -1,0 +1,123 @@
+<h2 mat-dialog-title>New Ability</h2>
+<mat-dialog-content class="mat-typography">
+  <p>Here You can add a new Ability.</p>
+    <form [formGroup]="abilityForm"
+      class="floating-labels p-t-20 p-b-10">
+
+      <!-- NAME -->
+        <div class="form-group has-feedback"
+          [ngClass]="abilityForm.controls.name.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+            <input type="text" placeholder="Name"
+            formControlName="name" name="name"
+          [ngClass]="abilityForm.controls.name.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger">  </div>
+        </div>
+
+
+      <!-- ABILITY -->
+      <div class="form-group has-feedback"
+        [ngClass]="abilityForm.controls.ability.invalid == true ?
+         'has-danger' : 'has-success'">
+          <div class="input-group">
+          <input type="text" placeholder="Ability"
+          formControlName="ability" name="ability"
+        [ngClass]="abilityForm.controls.ability.invalid == true ?
+         'form-control-danger' : 'form-control-success'"
+          class="form-control form-control-danger">  </div>
+      </div>
+
+      <!-- PICTURE -->
+        <div class="form-group has-feedback"
+          [ngClass]="abilityForm.controls.picture.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <select formControlName="picture" name="picture"
+              [ngClass]="abilityForm.controls.picture.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space">
+                <option value="" disabled>Picture</option>
+                <option value="{{picture.value}}"
+                *ngFor="let picture of pictures">{{picture.name}}</option>
+              </select>
+            </div>
+        </div>
+
+      <!-- TYPE -->
+      <div class="form-group has-feedback"
+        [ngClass]="abilityForm.controls.type.invalid == true ?
+         'has-danger' : 'has-success'">
+          <div class="input-group">
+            <select formControlName="type" name="type"
+            [ngClass]="abilityForm.controls.type.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger space">
+              <option value="" disabled>Type</option>
+              <option value="ATK">Attack</option>
+              <option value="DEF">Defense</option>
+              <option value="SPD">Speed</option>
+            </select>
+          </div>
+      </div>
+
+      <!-- GRADE -->
+      <div class="form-group has-feedback"
+        [ngClass]="abilityForm.controls.grade.invalid == true ?
+         'has-danger' : 'has-success'">
+          <div class="input-group">
+            <select formControlName="grade" name="grade"
+            [ngClass]="abilityForm.controls.grade.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger space">
+              <option value="" disabled>Grade</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="purple">Purple</option>
+              <option value="orange">Orange</option>
+            </select>
+          </div>
+      </div>
+
+      <!-- SHARDS -->
+      <div class="form-group has-feedback"
+        [ngClass]="abilityForm.controls.shards.invalid == true ?
+         'has-danger' : 'has-success'">
+          <div class="input-group">
+            <select formControlName="shards" name="shards"
+            [ngClass]="abilityForm.controls.shards.invalid == true ?
+           'form-control-danger' : 'form-control-success'"
+            class="form-control form-control-danger space">
+            <option value="" disabled>Shards</option>
+            <option value="10">10</option>
+            <option value="30">30</option>
+            <option value="200">200</option>
+            <option value="600">600</option>
+            </select>
+          </div>
+      </div>
+
+      <!-- INFO -->
+        <div class="form-group has-feedback"
+          [ngClass]="abilityForm.controls.info.invalid == true ?
+           'has-danger' : 'has-success'">
+            <div class="input-group">
+              <textarea type="text" placeholder="Info"
+              formControlName="info" name="info"
+              [ngClass]="abilityForm.controls.info.invalid == true ?
+             'form-control-danger' : 'form-control-success'"
+              class="form-control form-control-danger space"></textarea>
+            </div>
+        </div>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button type="submit" (click)="onSubmit()" [mat-dialog-close]="true"
+  [disabled]="abilityForm.invalid" class="btn btn-primary btn-success">
+  CREATE
+  </button>
+  <button type="button" (click)="closeModal()"
+  class="btn btn-primary btn-error">CANCEL</button>
+</mat-dialog-actions>

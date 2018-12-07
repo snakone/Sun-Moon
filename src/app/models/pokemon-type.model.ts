@@ -1,11 +1,10 @@
 export class PokemonType {
 
         constructor (
-          public strong:string[],
-          public weak:string[],
-          public effective:string[],
-          public half:string[],
-          public invulnerable?:string[]
+          public type:string,
+          public description:string,
+          public chart:string,
+          public features:string[]
         ){}
 
 }

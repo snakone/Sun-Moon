@@ -5,7 +5,7 @@
         <h4 class="card-title">{{move.name}}</h4>
         <h6 class="card-subtitle">Pokémon Move</h6>
         <div class="move">
-          <div class="row details">
+          <section class="row details">
             <mat-icon class="reset" matTooltip="Go back"
             (click)="goBack()">reply</mat-icon>
             <div class="col-6">
@@ -13,13 +13,14 @@
               <p>Power: <strong>{{move.power}}</strong></p>
               <p>Hit: <strong>{{move.hit}}</strong></p>
             </div>
-            <div class="col-6">
+            <div class="col-6 m-b-20">
               <p>PP: <strong>{{move.pp}}</strong></p>
               <p>Attack: <strong>{{move.attack}}</strong></p>
               <p>Move: <strong>{{move.z}}</strong></p>
             </div>
-          </div>
-          <span class="info">{{move.info}}</span>
+
+            <span class="info">{{move.info}}</span>
+          </section>
         </div>
       </div>
     </div>

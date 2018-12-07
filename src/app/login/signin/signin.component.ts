@@ -89,7 +89,7 @@ export class SignInComponent implements OnInit {
          if (res){
            Swal('Welcome!', 'Google Authentication Successful', 'success')
             .then(() => {
-              window.location.href = '/';
+              window.location.href = '/#/home';
             });
           }
        });

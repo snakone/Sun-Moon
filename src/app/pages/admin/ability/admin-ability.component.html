@@ -1,0 +1,53 @@
+<div class="animated fadeIn slower">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            <input (keyup)="onKeyUp($event)" [(ngModel)]="searchValue" class="form-control"
+             name="searchValue" placeHolder="Search any Ability...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Abilities registered
+            (<small><strong>{{totalAbilities}}</strong></small>)</h4>
+          <h6 class="card-subtitle">Ability Admin Panel</h6>
+          <div>
+            <button (click)="openAbilityDialog()" type="button"
+             class="btn waves-effect waves-light btn-rounded btn-success create">
+             NEW ABILITY
+            </button>
+          </div>
+          <br>
+
+          <table *ngIf="filteredAbilities.length > 0" class="table table-striped">
+            <thead>
+              <th>Ability</th>
+              <th>Actions</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ability of filteredAbilities">
+                <td class="little">{{ability.name}}</td>
+                <td>
+                  <i (click)="editAbility(ability)" class="fa fa-edit" title="Edit"></i>
+                  <i (click)="deleteAbility(ability)" class="fa fa-trash-o" title="Delete"></i>
+                </td>
+              </tr>
+            </table>
+
+            <sun-moon-loading *ngIf="abilities.length == 0"></sun-moon-loading>
+
+             <div *ngIf="filteredAbilities.length == 0 && abilities.length > 0" class="text-center">
+                No <strong>Ability</strong> match "<strong>{{searchValue}}</strong>". Please try again.
+             </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

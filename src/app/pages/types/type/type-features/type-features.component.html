@@ -1,0 +1,11 @@
+<h4 class="card-title">Special Features</h4>
+<h6 class="card-subtitle"><span class="{{type.type}}">{{type.type}}</span>
+   Exclusive</h6>
+  <div>
+    <ul class="check-list">
+      <li *ngFor="let feature of type.features"
+        [innerHTML]="feature"></li>
+    </ul>
+  </div>
+
+  <img src="../../../../assets/images/background/chart.png" class="chart"/>

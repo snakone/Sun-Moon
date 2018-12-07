@@ -19,8 +19,9 @@
             (<small><strong>{{count}}</strong></small>)</h4>
           <h6 class="card-subtitle">Displaying Trainers...</h6>
           <br>
-          <div class="row animated fadeIn" id="rows" *ngIf="trainers.length > 0">
-            <div *ngFor="let trainer of filteredTrainers" class="col-12 trainer-card">
+          <section class="row animated fadeIn" id="rows" *ngIf="trainers.length > 0">
+            <div *ngFor="let trainer of filteredTrainers |
+             paginate: { itemsPerPage: 10, currentPage: page }" class="col-12 trainer-card">
 
                 <div class="card" [routerLink]="['/trainer/', trainer.name]">
                   <div class="card-body shadow text-center hvr-underline-from-left">
@@ -46,7 +47,13 @@
                 </div>
 
              </div>
-           </div>
+
+             <pagination-controls class="text-center pagination"
+             (pageChange)="changeFrom($event)"
+             previousLabel=""
+             nextLabel=""></pagination-controls>
+
+           </section>
 
           <sun-moon-loading *ngIf="trainers.length == 0"></sun-moon-loading>
 
@@ -56,13 +63,6 @@
              No <strong>Trainer</strong> match "<strong>{{searchValue}}</strong>".
              Please try again.
            </div>
-          </div>
-
-          <div *ngIf="count > limit" class="center back-next">
-            <button [disabled]="from < limit" (click)="changeFrom(-limit)"
-            class="btn btn-secondary">Previous</button>
-            <button [disabled]="from + limit >= count" (click)="changeFrom(limit)"
-            class="btn btn-secondary">Next</button>
           </div>
 
           </div>

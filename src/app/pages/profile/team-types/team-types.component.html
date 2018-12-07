@@ -6,7 +6,61 @@
       <h6 class="card-subtitle">Is your Team good enough?</h6>
         <div class="text-center m-t-30">
 
-          <div *ngIf="teamTypes.strong.length > 0">
+          <div class="charts">
+            <div class="">
+              <h6 class="card-subtitle"><strong>ATTACKING</strong></h6>
+               <div class="row">
+                 <div class="col-12">
+                   <strong class="block good">Good</strong>
+                   <span class="type {{strong}}"
+                   *ngFor="let strong of teamTypes.strong"
+                   [routerLink]="['/types', strong]">{{strong}}</span>
+                 </div>
+                 <div class="col-12">
+                   <strong class="block bad">Bad</strong>
+                   <span class="type {{weak}}"
+                   *ngFor="let weak of teamTypes.weak"
+                   [routerLink]="['/types', weak]">{{weak}}</span>
+                 </div>
+               </div>
+            </div>
+
+            <hr class="m-t-30">
+
+            <div class="chart">
+              <h6 class="card-subtitle"><strong>DEFENDING</strong></h6>
+               <div class="row">
+                 <div class="col-12">
+                   <strong class="block good">Good</strong>
+                   <span class="type {{half}}"
+                   *ngFor="let half of teamTypes.half"
+                   [routerLink]="['/types', half]">{{half}}</span>
+                 </div>
+                 <div class="col-12">
+                   <strong class="block bad">Bad</strong>
+                   <span class="type {{effective}}"
+                   *ngFor="let effective of teamTypes.effective"
+                   [routerLink]="['/types', effective]">{{effective}}</span>
+                 </div>
+               </div>
+            </div>
+
+            <hr class="m-t-30">
+
+            <div class="m-t-40 m-b-20" *ngIf="teamTypes.invulnerable.length > 0">
+              <h6 class="card-subtitle"><strong>INVULNERABLE</strong></h6>
+              <div>
+                <span class="type {{invulnerable}}"
+                *ngFor="let invulnerable of teamTypes.invulnerable"
+                [routerLink]="['/types', invulnerable]">{{invulnerable}}</span>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <!-- <div *ngIf="teamTypes.strong.length > 0">
             <h5>Your Team is <strong>Strong</strong> against..</h5>
             <div class="flex">
               <span class="type {{strong}}"
@@ -47,7 +101,7 @@
               <span class="type {{invulnerable}}"
               *ngFor="let invulnerable of teamTypes.invulnerable">{{invulnerable}}</span>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>

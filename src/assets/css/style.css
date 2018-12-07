@@ -398,6 +398,7 @@ Main sidebar
   height: 100%;
   top: 0px;
   z-index: 20;
+  /* overflow-y: scroll; */  /* FIX THIS ON THE FUTURE, SCROLL APPEAR On BIG SCREENS */
   padding-top: 70px;
   background: #fff;
   -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
@@ -899,8 +900,8 @@ ul#themecolors {
 .purple-theme {
   background: #7460ee; }
 
-.megna-theme {
-  background: #56c0d8; }
+.orange-theme {
+  background: #ffa500; }
 
 .default-dark-theme {
   background: #263238;
@@ -958,16 +959,16 @@ ul#themecolors {
   background: -o-linear-gradient(left, #263238 0%, #263238 23%, #7460ee 23%, #7460ee 99%);
   background: linear-gradient(to right, #263238 0%, #263238 23%, #7460ee 23%, #7460ee 99%); }
 
-.megna-dark-theme {
+.orange-dark-theme {
   background: #263238;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #263238 0%, #263238 23%, #56c0d8 23%, #56c0d8 99%);
+  background: -moz-linear-gradient(left, #263238 0%, #263238 23%, #ffa500 23%, #ffa500 99%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #263238 0%, #263238 23%, #56c0d8 23%, #56c0d8 99%);
+  background: -webkit-linear-gradient(left, #263238 0%, #263238 23%, #ffa500 23%, #ffa500 99%);
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#263238), color-stop(23%, #263238), color-stop(23%, #56c0d8), color-stop(99%, #56c0d8));
-  background: -o-linear-gradient(left, #263238 0%, #263238 23%, #56c0d8 23%, #56c0d8 99%);
-  background: linear-gradient(to right, #263238 0%, #263238 23%, #56c0d8 23%, #56c0d8 99%); }
+  background: -webkit-gradient(linear, left top, right top, from(#263238), color-stop(23%, #263238), color-stop(23%, #ffa500), color-stop(99%, #ffa500));
+  background: -o-linear-gradient(left, #263238 0%, #263238 23%, #ffa500 23%, #ffa500 99%);
+  background: linear-gradient(to right, #263238 0%, #263238 23%, #ffa500 23%, #ffa500 99%); }
 
 .red-dark-theme {
   background: #263238;
@@ -1643,7 +1644,8 @@ form p:last-child {
 .card {
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 4px; }
+  border-radius: 4px;
+ }
 
 .page-titles .justify-content-end:last-child .d-flex {
   margin-right: 10px; }

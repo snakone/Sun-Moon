@@ -12,6 +12,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin.routes';
+import { AdminAbilityComponent } from './ability/admin-ability.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AdminRoutingModule } from './admin.routes';
     AdminPokemonComponent,
     AdminMoveComponent,
     AdminPokeItemComponent,
+    AdminAbilityComponent,
     AdminComponent
   ],
   exports: [

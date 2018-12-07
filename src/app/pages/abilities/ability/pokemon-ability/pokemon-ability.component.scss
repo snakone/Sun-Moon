@@ -1,0 +1,31 @@
+.pokemon-ability {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.flex {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon {
+  width: 56px;
+  height: 63px;
+  margin: 0 2px;
+}
+
+.pokemon:hover {
+  cursor:pointer;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+@media (max-width:600px){
+  .pokemon {
+    width: 40px;
+    height: 45px;
+  }
+}

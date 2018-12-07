@@ -1,0 +1,41 @@
+@import '../../../scss/types-text';
+
+.type-box {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: .9em;
+  margin-top: 35px;
+}
+
+.card {
+  min-height: 100%;
+}
+
+.section {
+  margin-top: 50px;
+}
+
+@media (max-width:768px){
+  .total {
+    margin-top: 50px;
+  }
+
+  .type-box {
+    font-size: .8em;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+}
+
+.reset {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+  color: black;
+}

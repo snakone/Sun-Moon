@@ -11,7 +11,9 @@ import { SettingsService,
          MoveService,
          PokeItemService,
          PokemonService,
-         TypesService } from './services.index';
+         TypeStatsService,
+         TypesService,
+         AbilityService} from './services.index';
 
 @NgModule({
   imports: [
@@ -29,7 +31,9 @@ import { SettingsService,
     MoveService,
     PokeItemService,
     PokemonService,
-    TypesService
+    TypeStatsService,
+    TypesService,
+    AbilityService
   ]
 })
 

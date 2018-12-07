@@ -1,0 +1,17 @@
+@import '../../../../scss/types-box';
+
+.text-color {
+  color:grey;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.bg {
+  background: transparent;
+}

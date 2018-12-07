@@ -30,7 +30,8 @@ img:hover {
 
 .pokedex-container {
   max-width: 900px;
-  margin: 30px auto;
+  margin: 10px auto;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -47,7 +48,6 @@ img:hover {
 }
 
 .pokedex-list {
-  min-height: 120px;
   border-radius: 4px;
   overflow-y: scroll;
   margin: 0 auto;
@@ -57,6 +57,7 @@ img:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-right: 15px;
 }
 
 .team-list {
@@ -95,7 +96,7 @@ img:hover {
   }
 
   .team-list {
-    min-height: 80px;
+    min-height: 50px;
     padding-left: 9px;
     margin-right: -10px;
     padding-bottom: 5px;
@@ -117,14 +118,13 @@ img:hover {
   }
 
   .drag-me mat-icon {
-    margin-top: -5px;
+    margin-top: -13px;
   }
 }
 
 .btn {
   display: block;
   margin: 0 auto;
-  margin-top: 15px;
 }
 
 @media (max-width:345px){

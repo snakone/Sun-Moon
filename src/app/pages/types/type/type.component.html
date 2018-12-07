@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+      <h4 class="card-title" *ngIf="type">
+        <span class="{{type.type}}">{{type.type}}</span>
+      </h4>
+      <h6 class="card-subtitle">The Pokémon Encylopedia</h6>
+      <mat-icon class="reset" matTooltip="Go back"
+      (click)="goBack()">reply</mat-icon>
+        <div class="type-box">
+          <div class="row" *ngIf="pokeitems">
+
+            <div class="col-sm-12 col-md-6">
+              <sun-moon-type-details [type]="type"
+                                     [single]="single.length"
+                                     [dual]="dual.length"
+                                     [total]="total"
+                                     [moves]="moves.length">
+              </sun-moon-type-details>
+            </div>
+
+            <div class="col-sm-12 col-md-5 ml-auto total">
+              <sun-moon-type-best [best]="best"></sun-moon-type-best>
+            </div>
+
+            <div class="col-12 section">
+              <sun-moon-type-pokemon [type]="type"
+                                     [single]="single"
+                                     [dual]="dual">
+              </sun-moon-type-pokemon>
+            </div>
+
+            <div class="col-sm-12 col-md-5 section">
+              <sun-moon-type-features [type]="type"></sun-moon-type-features>
+            </div>
+
+            <div class="col-sm-12 col-md-6 ml-auto section">
+              <sun-moon-type-chart [type]="type"
+                                   [chart]="chart">
+              </sun-moon-type-chart>
+            </div>
+
+            <div class="col-12 section">
+              <sun-moon-type-moves [type]="type"
+                                   [moves]="moves">
+              </sun-moon-type-moves>
+            </div>
+
+            <div class="col-12 section">
+              <sun-moon-type-items [type]="type"
+                                   [pokeitems]="pokeitems">
+              </sun-moon-type-items>
+            </div>
+
+          </div>
+
+          <sun-moon-loading *ngIf="!pokeitems"></sun-moon-loading>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

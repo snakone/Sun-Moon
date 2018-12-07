@@ -1,0 +1,19 @@
+@import '../../../../scss/types-box';
+
+.chart {
+  margin-top: 40px;
+}
+
+.block {
+  display: block;
+  margin: 5px 2px;
+  pointer-events: none;
+}
+
+.bad {
+  background: red;
+}
+
+.good {
+  background: lime;
+}

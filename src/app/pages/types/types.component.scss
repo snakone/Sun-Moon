@@ -1,0 +1,23 @@
+@import '../../scss/types-box';
+
+.types {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.type-grid {
+  max-width: 550px;
+  margin: 10px auto;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.description {
+  max-width: 550px;
+  margin: 0 auto;
+  font-size: .9em;
+  line-height: 25px;
+}

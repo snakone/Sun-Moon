@@ -8,13 +8,17 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TeamRankingComponent } from './team-ranking/team-ranking.component';
 import { TeamTypesComponent } from './team-types/team-types.component';
+import { FormsModule } from '@angular/forms';
+import { TypesModule } from '../types/types.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    TypesModule
   ],
   declarations: [
     ProfileComponent,

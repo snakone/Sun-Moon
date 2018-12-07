@@ -3,6 +3,13 @@
   margin-right: 5px;
 }
 
+
+@media (min-width: 992px) {
+  .card {
+   min-height: 400px;
+  }
+}
+
 .error {
   color:red;
   font-size: .7em;
@@ -13,18 +20,12 @@
   background: grey;
 }
 
-@media (min-width: 986px){
-  .card {
-    min-height: 366px;
-  }
-}
-
 .margintb {
   margin-top: 91px;
   margin-bottom: 27px;
 }
 
-@media (max-width:600px){
+@media (max-width:993px){
   .margintb {
     margin-top: 30px;
     margin-bottom: 5px;

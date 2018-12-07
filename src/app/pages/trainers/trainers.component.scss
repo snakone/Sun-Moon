@@ -75,10 +75,25 @@
   box-shadow: 4px 4px 4px grey;
 }
 
-.back-next {
+.pagination {
   margin: 0 auto;
   margin-top: 20px;
-  margin-left: 5px;
+  display: block;
+}
+
+@media (min-width: 1500px){
+  .pagination {
+    padding-right: 300px;
+    padding-left: 300px;
+  }
+}
+
+.pagination  ::ng-deep.ngx-pagination .current {
+  border-radius: 3px;
+}
+
+.pagination  ::ng-deep.ngx-pagination {
+  padding-left: 0;
 }
 
 button {

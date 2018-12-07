@@ -19,13 +19,13 @@
             (<small><strong>{{count}}</strong></small>)</h4>
           <h6 class="card-subtitle">Displaying Held Items...</h6>
           <br>
-          <div class="flex animated fadeIn pokeitems" *ngIf="pokeitems">
+          <section class="flex animated fadeIn pokeitems" *ngIf="pokeitems">
             <span *ngFor="let pokeitem of filteredPokeItems" >
                 <img [src]="urlImage + pokeitem.picture + '.png'"
                   [routerLink]="['/poke-item', pokeitem.picture]" class="pokeitem"
                   [matTooltip]="pokeitem.item"/>
               </span>
-           </div>
+           </section>
 
           <sun-moon-loading *ngIf="pokeitems.length == 0"></sun-moon-loading>
 

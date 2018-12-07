@@ -1,0 +1,28 @@
+<div class="single">
+  <h4 class="card-title"><span class="{{type.type}}">{{type.type}}</span> Pokémon</h4>
+  <h6 class="card-subtitle">Single Type</h6>
+
+  <div class="flex animated fadeIn">
+    <span *ngFor="let pokemon of single" >
+      <img [src]="urlImage + pokemon.picture + '.png'"
+        [routerLink]="['/pokemon', pokemon.picture]" class="pokemon"
+        [matTooltip]="pokemon.name"/>
+    </span>
+   </div>
+   <div *ngIf="single.length == 0">
+     <p>There is not <span class="{{type.type}}">{{type.type}}</span> Single Type!</p>
+   </div>
+</div>
+
+<div class="dual">
+  <h4 class="card-title"><span class="{{type.type}}">{{type.type}}</span> Pokémon</h4>
+  <h6 class="card-subtitle">Dual Type</h6>
+
+  <div class="flex animated fadeIn">
+    <span *ngFor="let pokemon of dual">
+      <img [src]="urlImage + pokemon.picture + '.png'"
+        [routerLink]="['/pokemon', pokemon.picture]" class="pokemon"
+        [matTooltip]="pokemon.name"/>
+    </span>
+   </div>
+</div>

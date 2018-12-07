@@ -33,7 +33,10 @@ img:hover {
 .letters {
 	max-width: 600px;
 	margin: 0 auto;
-	margin-bottom: 40px;
+	margin-top: 15px;
+	margin-bottom: 65px;
+	font-size: .9em;
+	line-height: 25px;
 }
 
 .letters p {
@@ -68,6 +71,7 @@ p {
 @media (max-width:600px){
 	 .letters {
 		margin-top: 10px;
+		margin-bottom: 45px;
 	}
 
 	.logo {
@@ -95,11 +99,6 @@ p {
 	.margin-top {
 		margin-top: 30px;
 		margin-bottom: 0;
-	}
-
-	.letters {
-		margin-top: 10px;
-		margin-bottom: 55px;
 	}
 }
 

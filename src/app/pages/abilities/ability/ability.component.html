@@ -1,0 +1,41 @@
+<div class="row animated fadeIn slower">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body" *ngIf="ability">
+        <h4 class="card-title">{{ability.name}}</h4>
+        <h6 class="card-subtitle">Pokémon Ability</h6>
+
+            <mat-icon class="reset" matTooltip="Go back"
+            (click)="goBack()">reply</mat-icon>
+            <section class="ability animated fadeIn slower">
+               <div class="row">
+                  <div class="col-6">
+                    <img [src]="urlImage + ability.picture + '.png'"
+                            class="ability-picture"/>
+                    <p>
+                      <label *ngIf="ability.type == 'ATK'"
+                      class="label label-danger">Attack</label>
+                      <label *ngIf="ability.type == 'DEF'"
+                      class="label label-info">Defense</label>
+                      <label *ngIf="ability.type == 'SPD'"
+                      class="label label-warning">Speed</label>
+                    </p>
+                  </div>
+                  <div class="col-6">
+                    <img [src]="urlImage + 'shard.png'"/>
+                    <p><strong>{{ability.shards}}</strong></p>
+                  </div>
+                 </div>
+                <div class="col-12">
+                  <span class="info">{{ability.info}}</span>
+                </div>
+            </section>
+
+            <section class="m-t-30">
+              <sun-moon-pokemon-ability [ability]="ability">
+              </sun-moon-pokemon-ability>
+            </section>
+      </div>
+    </div>
+  </div>
+</div>

@@ -101,43 +101,9 @@ h6 {
     font-weight: 400;
 }
 
-.display-5 {
-    font-size: 3rem;
-}
-
-.display-6 {
-    font-size: 36px;
-}
-
 .box {
     border-radius: $radius;
     padding: 10px;
-}
-
-html body {
-    .dl {
-        display: inline-block;
-    }
-    .db {
-        display: block;
-    }
-}
-
-.no-wrap {
-    td,
-    th {
-        white-space: nowrap;
-    }
-}
-
-/*******************
-Blockquote
-*******************/
-
-html body blockquote {
-    border-left: 5px solid $themecolor;
-    border: 1px solid $border;
-    padding: 15px;
 }
 
 .clear {
@@ -311,115 +277,6 @@ html body {
     }
 }
 
-
-/*******************
-vertical alignment
-*******************/
-
-html body {
-    .vt {
-        vertical-align: top;
-    }
-    .vm {
-        vertical-align: middle;
-    }
-    .vb {
-        vertical-align: bottom;
-    }
-}
-
-
-/*******************
-Opacity
-*******************/
-
-.op-5 {
-    opacity: 0.5;
-}
-.op-3 {
-    opacity: 0.3;
-}
-
-/*******************
-font weight
-*******************/
-
-html body {
-    .font-bold {
-        font-weight: 700;
-    }
-    .font-normal {
-        font-weight: normal;
-    }
-    .font-light {
-        font-weight: 300;
-    }
-    .font-medium {
-        font-weight: 500;
-    }
-    .font-16 {
-        font-size: 16px;
-    }
-    .font-14 {
-        font-size: 14px;
-    }
-    .font-10 {
-        font-size: 10px;
-    }
-    .font-18 {
-        font-size: 18px;
-    }
-    .font-20 {
-        font-size: 20px;
-    }
-}
-
-
-/*******************
-Border
-*******************/
-
-html body {
-    .b-0 {
-        border: none!important;
-    }
-    .b-r {
-        border-right: 1px solid $border;
-    }
-    .b-l {
-        border-left: 1px solid $border;
-    }
-    .b-b {
-        border-bottom: 1px solid $border;
-    }
-    .b-t {
-        border-top: 1px solid $border;
-    }
-    .b-all {
-        border: 1px solid $border!important;
-    }
-}
-
-
-/*******************
-Thumb size
-*******************/
-
-.thumb-sm {
-    height: 32px;
-    width: 32px;
-}
-
-.thumb-md {
-    height: 48px;
-    width: 48px;
-}
-
-.thumb-lg {
-    height: 88px;
-    width: 88px;
-}
-
 .hide {
     display: none;
 }
@@ -432,37 +289,12 @@ Thumb size
     border-radius: $radius;
 }
 
-
 /*******************
 Text Colors
 *******************/
 
 .text-white {
     color: $white!important;
-}
-
-.text-danger {
-    color: $danger!important;
-}
-
-.text-muted {
-    color: $muted!important;
-}
-
-.text-warning {
-    color: $warning!important;
-}
-
-.text-success {
-    color: $success!important;
-}
-
-.text-info {
-    color: $info!important;
-}
-
-.text-inverse {
-    color: $inverse!important;
 }
 
 html body {
@@ -475,8 +307,8 @@ html body {
     .text-primary {
         color: $primary!important;
     }
-    .text-megna {
-        color: $megna;
+    .text-orange {
+        color: $orange;
     }
     .text-dark {
         color: $bodytext;
@@ -512,8 +344,8 @@ Background Colors
 }
 
 html body {
-    .bg-megna {
-        background-color: $megna;
+    .bg-orange {
+        background-color: $orange;
     }
     .bg-theme {
         background-color: $themecolor;
@@ -524,85 +356,10 @@ html body {
     .bg-purple {
         background-color: $purple;
     }
-    .bg-light-part {
-        background-color: $bglight;
-    }
-    .bg-light-primary {
-        background-color: $light-primary;
-    }
-    .bg-light-success {
-        background-color: $light-success;
-    }
-    .bg-light-info {
-        background-color: $light-info;
-    }
-    .bg-light-extra {
-        background-color: $extra-light;
-    }
-    .bg-light-warning {
-        background-color: $light-warning;
-    }
-    .bg-light-danger {
-        background-color: $light-danger;
-    }
-    .bg-light-inverse {
-        background-color: $light-inverse;
-    }
-    .bg-light {
-        background-color: $light;
-    }
     .bg-white {
         background-color: $white;
     }
 }
-
-
-/*******************
-Rounds
-*******************/
-
-.round {
-    line-height: 48px;
-    color: $white;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    border-radius: 100%;
-    background: $info;
-    img {
-        border-radius: 100%;
-    }
-}
-
-.round-lg {
-    line-height: 65px;
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
-}
-
-.round.round-info {
-    background: $info;
-}
-
-.round.round-warning {
-    background: $warning;
-}
-
-.round.round-danger {
-    background: $danger;
-}
-
-.round.round-success {
-    background: $success;
-}
-
-.round.round-primary {
-    background: $primary;
-}
-
 
 /*******************
 Labels
@@ -621,10 +378,6 @@ Labels
     border-radius: 60px;
 }
 
-.label-custom {
-    background-color: $megna;
-}
-
 .label-success {
     background-color: $success;
 }
@@ -641,123 +394,21 @@ Labels
     background-color: $danger;
 }
 
-.label-megna {
-    background-color: $megna;
+.label-orange {
+    background-color: $orange;
 }
 
 .label-primary {
     background-color: $primary;
 }
 
-.label-purple {
-    background-color: $purple;
-}
-
 .label-red {
     background-color: $red;
-}
-
-.label-inverse {
-    background-color: $inverse;
-}
-
-.label-default {
-    background-color: $light;
 }
 
 .label-white {
     background-color: $white;
 }
-
-.label-light-success {
-    background-color: $light-success;
-    color: $success;
-}
-
-.label-light-info {
-    background-color: $light-info;
-    color: $info;
-}
-
-.label-light-warning {
-    background-color: $light-warning;
-    color: $warning;
-}
-
-.label-light-danger {
-    background-color: $light-danger;
-    color: $danger;
-}
-
-.label-light-megna {
-    background-color: $light-megna;
-    color: $megna;
-}
-
-.label-light-primary {
-    background-color: $light-primary;
-    color: $primary;
-}
-
-.label-light-inverse {
-    background-color: $light-inverse;
-    color: $inverse;
-}
-
-
-/*******************
- Badge
-******************/
-
-.badge {
-    font-weight: 400;
-}
-
-.badge-xs {
-    font-size: 9px;
-}
-
-.badge-xs,
-.badge-sm {
-    -webkit-transform: translate(0, -2px);
-    -ms-transform: translate(0, -2px);
-    -o-transform: translate(0, -2px);
-    transform: translate(0, -2px);
-}
-
-.badge-success {
-    background-color: $success;
-}
-
-.badge-info {
-    background-color: $info;
-}
-
-.badge-primary {
-    background-color: $primary;
-}
-
-.badge-warning {
-    background-color: $warning;
-    color:$white;
-}
-
-.badge-danger {
-    background-color: $danger;
-}
-
-.badge-purple {
-    background-color: $purple;
-}
-
-.badge-red {
-    background-color: $red;
-}
-
-.badge-inverse {
-    background-color: $inverse;
-}
-
 
 /*******************
 List-style-none
@@ -778,69 +429,4 @@ ul.list-style-none {
             }
         }
     }
-}
-
-
-/*******************
-dropdown-item
-******************/
-
-.dropdown-item {
-    padding: 8px 1rem;
-    color: $bodytext;
-}
-
-
-/*******************
-Layouts
-******************/
-
-.card-no-border {
-    .card {
-        border: 0px;
-        border-radius: 0px;
-        box-shadow: none;
-    }
-}
-
-.card-no-border .shadow-none {
-    box-shadow: none;
-}
-
-.card-outline-danger,
-.card-outline-info,
-.card-outline-warning,
-.card-outline-success,
-.card-outline-primary {
-    background: $white;
-}
-
-.card-fullscreen {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    overflow: auto;
-}
-
-
-/*******************/
-/*single column*/
-/*******************/
-
-.single-column {
-    .left-sidebar {
-        display: none;
-    }
-    .page-wrapper {
-        margin-left: 0px;
-    }
-}
-
-.fix-width {
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
 }

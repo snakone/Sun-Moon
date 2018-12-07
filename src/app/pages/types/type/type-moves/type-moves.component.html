@@ -1,0 +1,11 @@
+<h4 class="card-title">
+  <strong class="bg {{type.type}}">{{type.type}}</strong> Moves
+</h4>
+<h6 class="card-subtitle">Move Grid</h6>
+
+<div class="flex animated fadeIn">
+  <span class="type {{move.type}}" *ngFor="let move of moves"
+  [ngClass]="{'text-color': move.type == 'Ice' || move.type == 'Electric'}"
+  [routerLink]="['/move/', move.name | move]">
+  {{move.name}}</span>
+</div>

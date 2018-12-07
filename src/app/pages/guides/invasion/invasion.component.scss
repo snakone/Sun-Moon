@@ -1,0 +1,143 @@
+@import '../../../scss/types-text';
+
+.invasion {
+  max-width: 800px;
+  font-size: .9em;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.list {
+  margin: 20px auto;
+  margin-top: 15px;
+}
+
+.flex {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.item {
+  border: none;
+  margin: 5px 2px;
+  width: 40px;
+  height: auto;
+}
+
+.check-list li {
+		padding: 1.1em 5px 0.7em 30px;
+    margin-left: -35px;
+		font-size: 1.2em;
+		background: url("../../../../assets/images/icon/check-li.png") 0px 1.05em no-repeat;
+    border-bottom: solid 1px #e2e6e8;
+    width: 100%;
+    font-size: .9em;
+}
+
+.bracelet-list li {
+		padding: 1.3em 5px 0.7em 30px;
+    margin-left: -35px;
+		font-size: 1.2em;
+		background: url("../../../../assets/images/icon/bracelet.png") 0px 1.05em no-repeat;
+    border-bottom: solid 1px #e2e6e8;
+    width: 100%;
+    font-size: .9em;
+}
+
+ul {
+		list-style: none;
+}
+
+h2 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+h5 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  margin: 10px auto;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin-bottom: 25px;
+}
+
+img:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+
+hr.separator {
+	width:90%;
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+	border-radius:3px;
+  margin: 40px auto;
+}
+
+hr.invisible-separator {
+  height: 0;
+  width: 90%;
+  margin: 10px auto;
+  border-top: 1px solid transparent;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+ol {
+  margin-top: 15px;
+  color: #ccc;
+  list-style-type: none;
+}
+
+.index li {
+  position: relative;
+  font: bold italic 20px/1.5 Helvetica, Verdana, sans-serif;
+  padding-top: 10px;
+}
+
+.list-item {
+  position: absolute;
+  left: -25px;
+  top: 7px;
+}
+
+.coverage {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.raid {
+  margin: 20px auto;
+  margin-top: 15px;
+}
+
+.raid img {
+  border: none;
+}
+
+.pokemon {
+  width: 56px;
+  height: 63px;
+  margin: 0 2px;
+  border: none;
+}
+
+@media (max-width:600px){
+  .pokemon {
+    width: 40px;
+    height: 45px;
+  }
+}
